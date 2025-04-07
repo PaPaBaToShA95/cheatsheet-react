@@ -3,7 +3,7 @@ import React from "react";
 export const JsCheats = () => {
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">JavaScript Cheatsheet</h1>
+      <h1 className="text-3xl text-center font-bold mb-6">JavaScript Cheatsheet</h1>
 
       {/* Variables Section */}
       <div className="bg-gray-800 p-4 rounded-xl mb-6">

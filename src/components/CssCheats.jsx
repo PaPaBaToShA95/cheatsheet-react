@@ -12,7 +12,7 @@ export const CssCheats = () => {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold border-b pb-2 border-gray-600">🎨 CSS Повний огляд з Інтерактивністю</h2>
+      <h2 className="text-2xl font-semibold text-center border-b pb-2 border-gray-600">🎨 CSS Повний огляд з Інтерактивністю</h2>
 
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold border-b pb-2 border-gray-600">Текст і шрифти</h2>

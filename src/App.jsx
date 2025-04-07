@@ -6,8 +6,11 @@ import { ReactCheats } from "./components/ReactCheats";
 import { TailwindCheats } from "./components/TailwindCheats";
 import { VSCodeCheats } from "./components/VSCodeCheats";
 import { GitCheats } from "./components/GitCheats";
+import { GulpCheats } from "./components/GulpCheats";
+import { WebpackCheats } from "./components/WebpackCheats";
 
-const sections = ["HTML", "CSS", "JS", "React", "Tailwind", "VSCode", "Git"];
+
+const sections = ["HTML", "CSS", "JS", "React", "Tailwind", "VSCode", "Git", "Gulp", "Webpack"];
 
 export default function App() {
   const [active, setActive] = useState("HTML");
@@ -19,13 +22,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-4 flex flex-col justify-between">
       <div>
-        <h1 className="text-3xl font-bold mb-4 text-center">🧠 CheatSheet</h1>
+        <div className="text-7xl font-bold mb-4 text-center">🧠 CheatSheet</div>
 
         <div className="flex flex-col sm:flex-row gap-2 justify-center mb-6">
           {sections.map((section) => (
             <button
               key={section}
-              className={`px-4 py-2 rounded-full ${
+              className={`px-4 py-2 cursor-pointer rounded-full ${
                 active === section ? "bg-yellow-500 text-black" : "bg-gray-700"
               }`}
               onClick={() => setActive(section)}
@@ -35,7 +38,7 @@ export default function App() {
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto ">
           {active === "HTML" && <HtmlCheats />}
           {active === "CSS" && <CssCheats />}
           {active === "JS" && <JsCheats />}
@@ -43,12 +46,14 @@ export default function App() {
           {active === "Tailwind" && <TailwindCheats />}
           {active === "VSCode" && <VSCodeCheats />}
           {active === "Git" && <GitCheats />}
+          {active === "Gulp" && <GulpCheats />}
+          {active === "Webpack" && <WebpackCheats />}
         </div>
       </div>
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-yellow-500 text-black p-4 rounded-full shadow-lg hover:bg-yellow-400 transition-colors"
+        className="fixed bottom-6 cursor-pointer right-6 bg-yellow-500 text-black p-4 rounded-full shadow-lg hover:bg-yellow-400 transition-colors"
         aria-label="Піднятись вгору"
       >
         ↑

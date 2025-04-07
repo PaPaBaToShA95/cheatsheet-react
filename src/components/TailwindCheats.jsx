@@ -3,7 +3,7 @@ import React from "react";
 export const TailwindCheats = () => {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">📚 Tailwind CSS CheatSheet</h2>
+      <h2 className="text-2xl text-center font-bold mb-4">📚 Tailwind CSS CheatSheet</h2>
 
       <table className="min-w-full table-auto border-collapse text-sm">
         <thead>
