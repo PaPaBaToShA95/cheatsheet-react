@@ -21,7 +21,7 @@ export default function App() {
       <div>
         <h1 className="text-3xl font-bold mb-4 text-center">🧠 CheatSheet</h1>
 
-        <div className="flex gap-2 justify-center mb-6">
+        <div className="flex flex-col sm:flex-row gap-2 justify-center mb-6">
           {sections.map((section) => (
             <button
               key={section}
