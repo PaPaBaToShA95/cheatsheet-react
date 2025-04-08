@@ -11,9 +11,11 @@ export const CssCheats = () => {
   const [border, setBorder] = useState("2px solid #000000");
 
   return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-center border-b pb-2 border-gray-600">🎨 CSS Повний огляд з Інтерактивністю</h2>
-
+    <div className="p-6 max-w-7xl mx-auto">
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-4">CSS Стилі</h1>
+        <p className="text-xl text-gray-400">Базові стилі CSS для веб-сторінок та їх пояснення</p>
+      </header>
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold border-b pb-2 border-gray-600">Текст і шрифти</h2>
 

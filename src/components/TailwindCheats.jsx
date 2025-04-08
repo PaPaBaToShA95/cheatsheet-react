@@ -2,8 +2,11 @@ import React from "react";
 
 export const TailwindCheats = () => {
   return (
-    <div>
-      <h2 className="text-2xl text-center font-bold mb-4">📚 Tailwind CSS CheatSheet</h2>
+      <div className="p-6 max-w-7xl mx-auto">
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-4">📚 CSS => TailWind CheatSheet</h1>
+        <p className="text-xl text-gray-400">Базове перетворення CSS в Tailwind</p>
+      </header>
       <div className="overflow-x-auto">
       <table className="min-w-full table-auto text-left border-collapse">
         <thead>

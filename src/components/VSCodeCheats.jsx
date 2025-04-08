@@ -2,13 +2,12 @@ import React from "react";
 
 export const VSCodeCheats = () => {
   return (
-    <div className="space-y-6">
-      <div className="text-2xl text-center mb-4 font-bold">📝 Шорткати для VSCode</div>
-
-      <div className="text-lg text-center text-gray-400">
-        Ось найкорисніші шорткати для VSCode, які допоможуть вам працювати швидше і ефективніше. Дано для MacOS та Windows.
-      </div>
-
+    <div className="p-6 max-w-7xl mx-auto">
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-4">📝 Шорткати для VSCode</h1>
+        <p className="text-xl text-gray-400">Шорткати для VSCode, які допоможуть працювати швидше і ефективніше.</p>
+      </header>
+      
       <div className="overflow-x-auto">
         <table className="table-auto w-full border-collapse mt-6">
           <thead>

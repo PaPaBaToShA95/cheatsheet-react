@@ -23,7 +23,7 @@ const TagExample = ({ tag, description, example, demo, notes }) => (
 
 export const ReactCheats = () => {
   return (
-    <div className="react-reference-container p-6 max-w-7xl mx-auto">
+    <div className="p-6 max-w-7xl mx-auto">
       <header className="text-center mb-10">
         <h1 className="text-4xl font-bold mb-4">📚 Повний довідник React</h1>
         <p className="text-xl text-gray-400">Усі аспекти роботи з React, включаючи хуки, контекст, маршрутизацію і багато іншого.</p>

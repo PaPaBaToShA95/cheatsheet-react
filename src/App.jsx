@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-950 text-white p-4 flex flex-col justify-between">
       <div>
-        <div className="text-7xl font-bold mb-4 text-center">🧠 CheatSheet</div>
+        <div className="text-[40px] lg:text-[100px] leading-none font-bold mb-4 text-center">🧠 CheatSheet</div>
 
         <div className="flex flex-col sm:flex-row gap-2 justify-center mb-6">
           {sections.map((section) => (

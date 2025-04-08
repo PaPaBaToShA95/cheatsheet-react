@@ -1,11 +1,13 @@
 import React from "react";
 
+
 export const JsCheats = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl text-center font-bold mb-6">JavaScript Cheatsheet</h1>
-
-      {/* Variables Section */}
+  <div className="p-6 max-w-7xl mx-auto">
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-4">JavaScript CheatSheet</h1>
+        <p className="text-xl text-gray-400">База JS. Функції, події, об'єкти, масиви, змінні, оператори, регулярні вирази</p>
+      </header>
       <div className="bg-gray-800 p-4 rounded-xl mb-6">
         <h3 className="text-xl font-bold mb-2">1. Змінні (Variables)</h3>
         <p className="mb-2">Змінні використовуються для збереження значень у пам'яті.</p>
