@@ -14,7 +14,7 @@ export const cssCheatsData = [
   {
     title: "align-content",
     description: "Вирівнювання рядків гумового контейнера по вертикалі. ",
-    code: "align-content: stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit;",
+    code: "align-content: stretch | center | flex-start | flex-end | space-between | space-around | initial | inherit;",
     preview: (
       <figure>
         <img src={alignContent} alt="image" className=" mx-auto" />
@@ -58,7 +58,7 @@ export const cssCheatsData = [
   {
     title: "all",
     description: "Перевизначає значення усіх властивостей.",
-    code: "all: initial|inherit|unset;",
+    code: "all: initial | inherit | unset;",
     preview: (
       <div className="text-center text-gray-500 mt-2">
         <p>

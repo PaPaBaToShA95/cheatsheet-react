@@ -8,6 +8,12 @@ import { VSCodeCheats } from "./components/VSCodeCheats";
 import { GitCheats } from "./components/GitCheats";
 import { GulpCheats } from "./components/GulpCheats";
 import { WebpackCheats } from "./components/WebpackCheats";
+import {About} from "./components/About";
+import {Contact} from "./components/Contact";
+import {Project} from "./components/Project";
+
+
+
 
 const sections = [
   "HTML",
@@ -19,10 +25,14 @@ const sections = [
   "Git",
   "Gulp",
   "Webpack",
+  "Про Мене",
+  "Контакти",
+  "Про проект",
 ];
 
 export default function App() {
   const [active, setActive] = useState("HTML");
+  const [searchTerm, setSearchTerm] = useState("");
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -35,12 +45,20 @@ const scrollToTop = () => {
         <div className="text-[40px] lg:text-[100px] leading-none font-bold mb-4 text-center">
           🧠 CheatSheet
         </div>
-
-        <div className="flex flex-col sm:flex-row gap-2 justify-center mb-6">
+        <div className="text-center text-lg mb-4">
+          <input
+            type="text"
+            placeholder="Пошук..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="mt-4 w-full max-w-md mx-auto px-4 py-2 rounded-2xl bg-gray-800 text-white placeholder-gray-400"
+          />
+        </div>
+        <div className="flex flex-col flex-wrap sm:flex-row gap-2 justify-center mb-6 bg-gray-800 p-4 rounded-2xl w-full max-w-6xl mx-auto">
           {sections.map((section) => (
             <button
               key={section}
-              className={`px-4 py-2 cursor-pointer rounded-full ${
+              className={`px-4 py-2 cursor-pointer rounded-full hover:bg-yellow-500 text-white hover:text-black hover:-translate-y-[10px] transition-transform duration-300 ease-in-out ${
                 active === section ? "bg-yellow-500 text-black" : "bg-gray-700"
               }`}
               onClick={() => setActive(section)}
@@ -51,15 +69,18 @@ const scrollToTop = () => {
         </div>
 
         <div className="max-w-4xl mx-auto ">
-          {active === "HTML" && <HtmlCheats />}
-          {active === "CSS" && <CssCheats />}
-          {active === "JS" && <JsCheats />}
-          {active === "React" && <ReactCheats />}
-          {active === "Tailwind" && <TailwindCheats />}
-          {active === "VSCode" && <VSCodeCheats />}
-          {active === "Git" && <GitCheats />}
-          {active === "Gulp" && <GulpCheats />}
-          {active === "Webpack" && <WebpackCheats />}
+          {active === "HTML" && <HtmlCheats searchTerm={searchTerm} />}
+          {active === "CSS" && <CssCheats searchTerm={searchTerm} />}
+          {active === "JS" && <JsCheats searchTerm={searchTerm} />}
+          {active === "React" && <ReactCheats searchTerm={searchTerm} />}
+          {active === "Tailwind" && <TailwindCheats searchTerm={searchTerm} />}
+          {active === "VSCode" && <VSCodeCheats searchTerm={searchTerm} />}
+          {active === "Git" && <GitCheats searchTerm={searchTerm} />}
+          {active === "Gulp" && <GulpCheats searchTerm={searchTerm} />}
+          {active === "Webpack" && <WebpackCheats searchTerm={searchTerm} />}
+          {active === "Про Мене" && <About />}
+          {active === "Контакти" && <Contact />}
+          {active === "Про проект" && <Project />}
         </div>
       </div>
 
@@ -70,10 +91,9 @@ const scrollToTop = () => {
       >
         ⇑
       </button>
-   
 
       <footer className="text-center text-gray-500 mt-8 py-2 border-t border-gray-800">
-        Powered by Oleksiy Ermantraut sudent of{" "}
+        Powered by Oleksiy Ermantraut student of{" "}
         <a
           href="https://ithillel.ua/"
           target="_blank"

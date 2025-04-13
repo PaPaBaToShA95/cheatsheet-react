@@ -17,4 +17,12 @@ h5{
 h6{
     @apply text-sm font-bold ;
 }
-
+th{
+    width: -webkit-fill-available;
+}
+ol{
+    list-style: none;
+}
+li{
+    list-style: none;
+}
