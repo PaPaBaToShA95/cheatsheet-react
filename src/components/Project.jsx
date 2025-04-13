@@ -162,10 +162,13 @@ export const Project = () => {
         <span className="block text-3xl text-center font-semibold">
           <strong>🙏 Подяка всім, хто підтримує цей проєкт!</strong>
         </span>
-        <span className="block text-3xl text-center font-semibold">   
+        <span className="block text-3xl text-center font-semibold">
           <strong>
             {" "}
-            <a href="https://send.monobank.ua/jar/6WW52zGGdP">
+            <a
+              className="hover:text-blue-400"
+              href="https://send.monobank.ua/jar/6WW52zGGdP"
+            >
               🔗Посилання на MONO-банку
             </a>
           </strong>
