@@ -11,6 +11,7 @@ import { WebpackCheats } from "./components/WebpackCheats";
 import {About} from "./components/About";
 import {Contact} from "./components/Contact";
 import {Project} from "./components/Project";
+import {MainPage} from "./components/MainPage";
 
 
 
@@ -31,7 +32,7 @@ const sections = [
 ];
 
 export default function App() {
-  const [active, setActive] = useState("HTML");
+  const [active, setActive] = useState("MainPage");
   const [searchTerm, setSearchTerm] = useState("");
 
 const scrollToTop = () => {
@@ -69,6 +70,7 @@ const scrollToTop = () => {
         </div>
 
         <div className="max-w-4xl mx-auto ">
+          {active === "MainPage" && <MainPage />}
           {active === "HTML" && <HtmlCheats searchTerm={searchTerm} />}
           {active === "CSS" && <CssCheats searchTerm={searchTerm} />}
           {active === "JS" && <JsCheats searchTerm={searchTerm} />}
@@ -86,7 +88,7 @@ const scrollToTop = () => {
 
       <button
         onClick={scrollToTop}
-        className="fixed bottom-22 cursor-pointer right-6 bg-yellow-500 text-black p-4  rounded-full shadow-lg hover:bg-yellow-400 transition-colors "
+        className="fixed bottom-22 cursor-pointer right-6 bg-yellow-500 text-black p-4  rounded-full shadow-lg hover:bg-yellow-400 transition-colors  "
         aria-label="Піднятись вгору"
       >
         ⇑

@@ -26,3 +26,13 @@ ol{
 li{
     list-style: none;
 }
+tr{
+    padding: 0.75rem;
+        border-bottom-width: 1px;
+}
+table{
+    width: 100%;
+    overflow-x: auto;
+    width: 100%;
+    table-layout: fixed;
+}

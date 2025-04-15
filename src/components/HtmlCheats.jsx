@@ -2,13 +2,36 @@ import React from "react";
 import { htmlCheatsData } from "../data/htmlCheats";
 import CheatSection from "./CheatSection";
 
+
+
+const extractTextFromJSX = (node) => {
+  if (typeof node === "string" || typeof node === "number") {
+    return node.toString();
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(extractTextFromJSX).join(" ");
+  }
+
+  if (node && typeof node === "object" && node.props) {
+    return extractTextFromJSX(node.props.children);
+  }
+
+  return "";
+};
+
 export const HtmlCheats = ({ searchTerm }) => {
-  const filtered = htmlCheatsData.filter(
-    (item) =>
-      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.code.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filtered = htmlCheatsData.filter((item) => {
+    const search = searchTerm.toLowerCase();
+    const previewText = extractTextFromJSX(item.preview).toLowerCase();
+
+    return (
+      item.title.toLowerCase().includes(search) ||
+      item.description.toLowerCase().includes(search) ||
+      item.code.toLowerCase().includes(search) ||
+      previewText.includes(search)
+    );
+  });
 
   return (
     <div className="p-6 max-w-7xl mx-auto">

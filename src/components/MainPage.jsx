@@ -1,11 +1,7 @@
 import React from "react";
-import QRMono from "../assets/QRMono.png"
+import QRMono from "../assets/QRMono.png";
 
- 
-
-export const Project = () => {
-  
-
+export const MainPage = () => {
   return (
     <div className="p-6 max-w-7xl text-center mx-auto">
       <p className="text-xl text-gray-400 space-y-4">
@@ -166,7 +162,7 @@ export const Project = () => {
         <span className="block text-3xl text-center font-semibold">
           <strong>
             {" "}
-            <img id="qrcode" className="mx-auto" src= {QRMono} />
+            <img id="qrcode" className="mx-auto" src={QRMono} />
             <a
               className="hover:text-blue-400"
               href="https://send.monobank.ua/jar/6WW52zGGdP"
@@ -181,8 +177,7 @@ export const Project = () => {
         </span>
       </p>
     </div>
-  );};
+  );
+};
 
-
-
-export default Project;
+export default MainPage;
