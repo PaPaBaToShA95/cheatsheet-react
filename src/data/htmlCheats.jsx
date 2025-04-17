@@ -1606,7 +1606,7 @@ export const htmlCheatsData = [
 </datalist>`,
     preview: (
       <div>
-        <input list="fruits" className="border border-gray-400 mb-4" />
+        <input list="fruits" className="border w-64 border-gray-400 mb-4" />
         <datalist id="fruits">
           <option value="Apple" />
           <option value="Banana" />
@@ -2021,15 +2021,15 @@ export const htmlCheatsData = [
   <input type="submit" value="Відправити" />
 </fieldset>`,
     preview: (
-      <div>
-        <fieldset className="border border-gray-400 p-4 rounded-2xl mb-4">
+      <div >
+        <fieldset className="border border-gray-400 p-4 rounded-2xl mb-4 ">
           <legend className="font-bold">Заголовок групи</legend>
           <label htmlFor="name">Ім'я:</label>
           <input
             type="text"
             id="name"
             name="name"
-            className="border border-gray-400 mb-2"
+            className="border w-32 border-gray-400 mb-2"
           />
           <br />
           <label htmlFor="email">Email:</label>
@@ -2037,7 +2037,7 @@ export const htmlCheatsData = [
             type="email"
             id="email"
             name="email"
-            className="border border-gray-400 mb-2"
+            className="border w-32 border-gray-400 mb-2"
           />
           <br />
           <label htmlFor="password">Пароль:</label>
@@ -2045,7 +2045,7 @@ export const htmlCheatsData = [
             type="password"
             id="password"
             name="password"
-            className="border border-gray-400 mb-2"
+            className="border w-32 border-gray-400 mb-2"
           />
           <br />
           <input
@@ -2231,13 +2231,13 @@ export const htmlCheatsData = [
 </form>`,
     preview: (
       <div>
-        <form action="/submit" method="post">
+        <form className="" action="/submit" method="post">
           <label htmlFor="name">Ім'я:</label>
           <input
             type="text"
             id="name"
             name="name"
-            className="border border-gray-400 mb-2"
+            className="border w-64 border-gray-400 mb-2"
           />
           <br />
           <label htmlFor="email">Email:</label>
@@ -2245,7 +2245,7 @@ export const htmlCheatsData = [
             type="email"
             id="email"
             name="email"
-            className="border border-gray-400 mb-2"
+            className="border w-64 border-gray-400 mb-2"
           />
           <br />
           <label htmlFor="password">Пароль:</label>
@@ -2253,7 +2253,7 @@ export const htmlCheatsData = [
             type="password"
             id="password"
             name="password"
-            className="border border-gray-400 mb-2"
+            className="border w-64 border-gray-400 mb-2"
           />
           <br />
           <input
@@ -2707,13 +2707,13 @@ export const htmlCheatsData = [
       <div>
         <div className="flex flex-col justify-center items-center">
           <input
-            className="mb-4 w-auto border-2 rounded-2xl p-1"
+            className="mb-4  border-2 rounded-2xl p-1 w-64"
             type="text"
             name="username"
             placeholder="  Введіть ім'я"
           />
           <input
-            className="mb-4 w-auto border-2 rounded-2xl p-1"
+            className="mb-4 w-64 border-2 rounded-2xl p-1 "
             type="password"
             name="password"
             placeholder="  Введіть пароль"
@@ -2739,7 +2739,7 @@ export const htmlCheatsData = [
             placeholder="  Введіть ім'я"
           />
           <input
-            className="mb-4 w-auto border-2 rounded-2xl p-1"
+            className="mb-4 w-72 border-2 rounded-2xl p-1 "
             type="file"
             name="file"
           />
@@ -3046,7 +3046,7 @@ export const htmlCheatsData = [
       <div className="flex flex-col items-center gap-4">
         <label for="username">Ім'я користувача:</label>
         <input
-          className="border border-gray-400 mb-2 rounded-2xl p-2"
+          className="border border-gray-400 mb-2 rounded-2xl p-2 w-64"
           type="text"
           id="username"
           name="username"
@@ -3441,9 +3441,11 @@ export const htmlCheatsData = [
             gap: "15px",
             padding: "10px",
             background: "green",
+            width: "fit-content",
+            fontSize: "20px",
           }}
         >
-          <a className="cursor-pointer">Головна</a>
+          <a className="cursor-pointer ">Головна</a>
           <a className="cursor-pointer">Про нас</a>
           <a className="cursor-pointer">Контакти</a>
         </nav>
@@ -3506,7 +3508,7 @@ export const htmlCheatsData = [
         <object
           data="https://example.com/flash.swf"
           type="application/x-shockwave-flash"
-          style={{ width: "300px", height: "200px", background: "#eee" }}
+          style={{ width: "250px", height: "150px", background: "#eee" }}
         >
           <p>Ваш браузер не підтримує Flash</p>
         </object>
@@ -4532,7 +4534,7 @@ function hello() {
 Введіть тут текст...
 </textarea>`,
     preview: (
-      <textarea rows="4" cols="50">
+      <textarea className="border border-gray-400 p-4 rounded-2xl " >
         Введіть тут текст...
       </textarea>
     ),
@@ -4684,16 +4686,16 @@ function hello() {
 </video>`,
     preview: (
       <div className="flex flex-col items-center">
-      <video controls style={{ maxWidth: "300px" }}>
-        <source src={video} type="video/mp4" />
-        <track
-          kind="subtitles"
-          src="subtitles_uk.vtt"
-          srclang="uk"
-          label="Українська"
-        />
-        Ваш браузер не підтримує відтворення відео.
-      </video>
+        <video controls style={{ maxWidth: "300px" }}>
+          <source src={video} type="video/mp4" />
+          <track
+            kind="subtitles"
+            src="subtitles_uk.vtt"
+            srclang="uk"
+            label="Українська"
+          />
+          Ваш браузер не підтримує відтворення відео.
+        </video>
       </div>
     ),
   },
@@ -4753,10 +4755,10 @@ function hello() {
 </video>`,
     preview: (
       <div className="flex flex-col items-center">
-      <video controls width="300">
-        <source src={video} type="video/mp4" />
-        Ваш браузер не підтримує відтворення відео.
-      </video>
+        <video controls width="300">
+          <source src={video} type="video/mp4" />
+          Ваш браузер не підтримує відтворення відео.
+        </video>
       </div>
     ),
   },
@@ -4764,13 +4766,14 @@ function hello() {
     title: "<wbr>",
     description:
       "Вказує браузеру місце, де допускається робити перенос рядка в тексті.",
-    code: `<p>Дужедовгесловоякеможебутиперенесено<wbr>нановийрядок.</p>`,
+    code: `<p>Дужедов<wbr>гесловоякеможебутиперенесено<wbr>нановийрядок.</p>`,
     preview: (
       <p>
-        Дужедовгесловоякеможебутиперенесено
+        Дужедов<wbr />гесловоякемо<wbr />жебутиперенесено
         <wbr />
-        <br />нановийрядок.
+        <br />
+        нановийрядок.
       </p>
     ),
-  }
+  },
 ];

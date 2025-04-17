@@ -131,3 +131,13 @@ kbd {
         transform: translate(0, 0) rotate(0deg);
     }
 }
+td {
+    word-wrap: break-word;
+    white-space: normal;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-color: #888 #f1f1f1;
+    @apply bg-gray-950
+}
