@@ -1,136 +1,61 @@
 {
-  "hash": "60477530",
+  "hash": "9d0b20c9",
   "configHash": "e5e436e1",
-  "lockfileHash": "9678522f",
-  "browserHash": "f2a47fa9",
+  "lockfileHash": "20f84280",
+  "browserHash": "1bbdfa7c",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "a5e27615",
+      "fileHash": "f8320d4a",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "42030c25",
+      "fileHash": "e1efe558",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "08cc441b",
+      "fileHash": "470352c9",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "f770bbd0",
+      "fileHash": "9416c5c1",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "bd5bb499",
+      "fileHash": "91b4cb3f",
       "needsInterop": true
     },
-    "vite": {
-      "src": "../../node_modules/vite/dist/node/index.js",
-      "file": "vite.js",
-      "fileHash": "3a0b2765",
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "d3e50009",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "6814513c",
       "needsInterop": false
     }
   },
   "chunks": {
-    "postcss-YTVIX4HR": {
-      "file": "postcss-YTVIX4HR.js"
+    "chunk-N64UF633": {
+      "file": "chunk-N64UF633.js"
     },
-    "dep-CEj2138F-DMNWPJJJ": {
-      "file": "dep-CEj2138F-DMNWPJJJ.js"
+    "chunk-XWSVSGZS": {
+      "file": "chunk-XWSVSGZS.js"
     },
-    "chunk-SJUG2XKJ": {
-      "file": "chunk-SJUG2XKJ.js"
-    },
-    "false-S24O4KRJ": {
-      "file": "false-S24O4KRJ.js"
-    },
-    "api_vite-4CVLWFFX": {
-      "file": "api_vite-4CVLWFFX.js"
-    },
-    "jiti-LP3R7GPZ": {
-      "file": "jiti-LP3R7GPZ.js"
-    },
-    "__vite-optional-peer-dep_yaml_vite-H2ICD3E5": {
-      "file": "__vite-optional-peer-dep_yaml_vite-H2ICD3E5.js"
-    },
-    "node_http2-5GQVKPIN": {
-      "file": "node_http2-5GQVKPIN.js"
-    },
-    "dep-CvfTChi5-LEGDLOHT": {
-      "file": "dep-CvfTChi5-LEGDLOHT.js"
-    },
-    "watch-MDJJAXIG": {
-      "file": "watch-MDJJAXIG.js"
-    },
-    "rollup-Q2EB6K54": {
-      "file": "rollup-Q2EB6K54.js"
-    },
-    "chunk-AB7UUPHK": {
-      "file": "chunk-AB7UUPHK.js"
-    },
-    "dep-BXMtZB7a-TGM2JBZV": {
-      "file": "dep-BXMtZB7a-TGM2JBZV.js"
-    },
-    "chunk-SAJSMXRP": {
-      "file": "chunk-SAJSMXRP.js"
-    },
-    "chunk-QDVS55RN": {
-      "file": "chunk-QDVS55RN.js"
-    },
-    "chunk-BU3GOCFK": {
-      "file": "chunk-BU3GOCFK.js"
-    },
-    "chunk-UQW5HWQO": {
-      "file": "chunk-UQW5HWQO.js"
-    },
-    "chunk-5YT5TAV4": {
-      "file": "chunk-5YT5TAV4.js"
-    },
-    "chunk-UOT6TZMV": {
-      "file": "chunk-UOT6TZMV.js"
-    },
-    "chunk-7BTUS4NX": {
-      "file": "chunk-7BTUS4NX.js"
-    },
-    "chunk-6ZYJFPSK": {
-      "file": "chunk-6ZYJFPSK.js"
-    },
-    "chunk-BACZLIV2": {
-      "file": "chunk-BACZLIV2.js"
-    },
-    "chunk-QI5EE2TU": {
-      "file": "chunk-QI5EE2TU.js"
-    },
-    "chunk-44BAH5RC": {
-      "file": "chunk-44BAH5RC.js"
-    },
-    "chunk-T4Z3IV4U": {
-      "file": "chunk-T4Z3IV4U.js"
-    },
-    "node_http-KRLRMD5Z": {
-      "file": "node_http-KRLRMD5Z.js"
-    },
-    "chunk-PUHKOCCP": {
-      "file": "chunk-PUHKOCCP.js"
-    },
-    "node_https-X5W4GMW2": {
-      "file": "node_https-X5W4GMW2.js"
-    },
-    "chunk-LINBOALO": {
-      "file": "chunk-LINBOALO.js"
-    },
-    "chunk-EAWROPGL": {
-      "file": "chunk-EAWROPGL.js"
+    "chunk-VCDLJVZS": {
+      "file": "chunk-VCDLJVZS.js"
     }
   }
 }

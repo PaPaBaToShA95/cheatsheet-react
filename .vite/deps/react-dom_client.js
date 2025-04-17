@@ -1,12 +1,10 @@
 import {
   require_react_dom
-} from "./chunk-QDVS55RN.js";
+} from "./chunk-XWSVSGZS.js";
 import {
+  __commonJS,
   require_react
-} from "./chunk-BU3GOCFK.js";
-import {
-  __commonJS
-} from "./chunk-EAWROPGL.js";
+} from "./chunk-VCDLJVZS.js";
 
 // node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({

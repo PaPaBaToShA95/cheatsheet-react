@@ -1,38 +1,133 @@
 @import "tailwindcss";
-h1{
-    @apply text-3xl font-bold ;
+
+h1 {
+    @apply text-3xl font-bold;
 }
-h2{
-    @apply text-2xl font-bold ;
+
+h2 {
+    @apply text-2xl font-bold;
 }
-h3{
-    @apply text-xl font-bold ;
+
+h3 {
+    @apply text-xl font-bold;
 }
-h4{
-    @apply text-lg font-bold ;
+
+h4 {
+    @apply text-lg font-bold;
 }
-h5{
-    @apply text-base font-bold ;
+
+h5 {
+    @apply text-base font-bold;
 }
-h6{
-    @apply text-sm font-bold ;
+
+h6 {
+    @apply text-sm font-bold;
 }
-th{
+
+th {
     width: -webkit-fill-available;
 }
-ol{
+
+ol {
     list-style: none;
 }
-li{
+
+li {
     list-style: none;
 }
-tr{
+
+tr {
     padding: 0.75rem;
-        border-bottom-width: 1px;
+    border-bottom-width: 1px;
 }
-table{
+
+table {
     width: 100%;
     overflow-x: auto;
     width: 100%;
     table-layout: fixed;
+}
+
+kbd {
+    background: #ccc;
+    border-radius: 3px;
+    padding: 0 4px;
+}
+
+.floating {
+    animation: floatZeroGravity 30s ease-in-out infinite;
+}
+
+@keyframes floatZeroGravity {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(10px, -10px) rotate(1deg);
+    }
+
+    40% {
+        transform: translate(15px, 5px) rotate(2deg);
+    }
+
+    60% {
+        transform: translate(-10px, 15px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-15px, -5px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+
+}
+.key {
+    @apply absolute bg-white text-black px-3 py-2 rounded shadow text-sm font-bold;
+    opacity: 0.8;
+    animation: drift 40s ease-in-out infinite;
+}
+
+.drift.delay-0 {
+    animation-delay: 0s;
+}
+
+.drift.delay-1 {
+    animation-delay: 5s;
+}
+
+.drift.delay-2 {
+    animation-delay: 10s;
+}
+
+.drift.delay-3 {
+    animation-delay: 15s;
+}
+
+.drift.delay-4 {
+    animation-delay: 20s;
+}
+
+@keyframes drift {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(30px, -40px) rotate(10deg);
+    }
+
+    50% {
+        transform: translate(-20px, 30px) rotate(-8deg);
+    }
+
+    75% {
+        transform: translate(15px, -20px) rotate(6deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }

@@ -1185,7 +1185,6 @@ export const htmlCheatsData = [
     preview: (
       <div>
         <div className="gap-2 flex flex-col mb-4">
-         
           <button
             type="button"
             className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer"
@@ -2758,7 +2757,6 @@ export const htmlCheatsData = [
             type="image"
             name="image"
             src="https://www.svgrepo.com/show/504058/button-electricity-charging-plug-energy-power.svg"
-
           />
           Кнопка у вигляді картинки
         </div>
@@ -2939,6 +2937,139 @@ export const htmlCheatsData = [
                 Встановлює ширину елемента форми. Тільки для &lt;input
                 type="image"&gt;
               </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<ins>",
+    description:
+      "Тег <ins> (від англ. inserted - вставлений) визначає текст, котрий був доданий в нову версію документу.",
+    code: `<p>Це <ins>приклад</ins> тексту.</p>`,
+    preview: (
+      <div>
+        <p>
+          Це <ins>приклад</ins> тексту.
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис атрибута</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>cite</td>
+              <td>
+                Вказує посилання на документ, де наведена причина редагування
+                тексту і інші подробиці.
+              </td>
+            </tr>
+            <tr>
+              <td>datetime</td>
+              <td>Дата і час редагування тексту.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<kbd>",
+    description:
+      "Тег <kbd> (від англ. keyboard key - клавіша клавіатури) визначає клавішу клавіатури.",
+    code: `<p> Це <kbd>CTRL</kbd> клавіша CTRL.</p>`,
+    preview: (
+      <div>
+        <p>
+          Це <kbd>CTRL</kbd> клавіша CTRL.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "<keygen>",
+    description:
+      "Тег <keygen> (від англ. key generator - генератор ключів) визначає поле для введення ключа.",
+    code: `<form>
+ <keygen>
+</form>`,
+    preview: (
+      <div>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис атрибута</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>autofocus</td>
+              <td>
+                Вказує, що елемент &lt;keygen&gt; повинен автоматично отримувати
+                фокус при завантаженні сторінки.
+              </td>
+            </tr>
+            <tr>
+              <td>challenge</td>
+              <td>
+                Вказує, що значення елемента &lt;keygen&gt; повинно змінюватись
+                при відправці форми.
+              </td>
+            </tr>
+            <tr>
+              <td>disabled</td>
+              <td>Вимикає &lt;keygen&gt; елемент.</td>
+            </tr>
+            <tr>
+              <td>form</td>
+              <td>
+                Ідентифікатор форми до якої застосовується шифрування. Пов'язує
+                генератор з формою.
+              </td>
+            </tr>
+            <tr>
+              <td>keytype</td>
+              <td>Задає алгоритм шифрування ключа.</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>Ім'я &lt;keygen&gt; елемента.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<label>",
+    description:
+      "Тег <label> (від англ. label - мітка) визначає мітку для елемента форми.",
+    code: `<label for="username">Ім'я користувача:</label>
+<input type="text" id="username" name="username">`,
+    preview: (
+      <div className="flex flex-col items-center gap-4" >
+        <label for="username">Ім'я користувача:</label>
+        <input  className="border border-gray-400 mb-2 rounded-2xl p-2" type="text" id="username" name="username" />
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис атрибута</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>for</td>
+              <td>Ідентифікатор елемента, з яким буде пов'язано мітку.</td>
+            </tr>
+            <tr>
+              <td>form</td>
+              <td>Задає одну або кілька форм до яких належить мітка.</td>
             </tr>
           </tbody>
         </table>
