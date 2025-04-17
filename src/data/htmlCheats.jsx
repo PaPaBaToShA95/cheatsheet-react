@@ -1,6 +1,7 @@
 
 import map from "../assets/map.png";
 import MyCanvas from "../components/MyCanvas";
+import video from "../assets/video.mp4";
 
 export const htmlCheatsData = [
   {
@@ -728,7 +729,7 @@ export const htmlCheatsData = [
   <area shape="poly" coords="45,67,89,123,456,789" href="https://example.com" alt="Example">
 </map>`,
     preview: (
-      <div>
+      <div contentlassName="flex flex-col items-center gap-4">
         <img className="mb-4" src={map} usemap="#image-map" />
         <map name="image-map">
           <area
@@ -750,7 +751,7 @@ export const htmlCheatsData = [
             alt="Example"
           />
         </map>
-        <table>
+        <table className="w-full border-collapse">
           <thead>
             <tr className="bg-gray-500 ">
               <th>Атрибут</th>
@@ -765,14 +766,12 @@ export const htmlCheatsData = [
             <tr>
               <td>coords</td>
               <td>Вказує координати активної області.</td>
-              <td></td>
             </tr>
             <tr>
               <td>download</td>
               <td>
                 Задає адресу документа, на який слід перейти для завантаження.
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>href</td>
@@ -780,12 +779,10 @@ export const htmlCheatsData = [
                 Визначає сторінку, котру буде завантажено, коли користувач
                 натисне на гіперпосилання.
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>hreflang</td>
               <td>Вказує мову документа, на який веде посилання.</td>
-              <td></td>
             </tr>
             <tr>
               <td>media</td>
@@ -793,36 +790,30 @@ export const htmlCheatsData = [
                 Вказує, що сторінка за цільовою адресою оптимізовані під вказані
                 пристрої.
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>nohref</td>
               <td>Область без посилання на інший документ.</td>
-              <td></td>
             </tr>
             <tr>
               <td>rel</td>
               <td>
                 Визначає, що поєднує поточний документ і цільову сторінку.
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>shape</td>
               <td>Визначає форму області.</td>
-              <td></td>
             </tr>
             <tr>
               <td>target</td>
               <td>
                 Ім'я вікна або фрейму, куди браузер буде завантажувати документ.
               </td>
-              <td></td>
             </tr>
             <tr>
               <td>type</td>
               <td>Встановлює MIME-тип документа, на який веде посилання.</td>
-              <td></td>
             </tr>
           </tbody>
         </table>
@@ -3052,9 +3043,14 @@ export const htmlCheatsData = [
     code: `<label for="username">Ім'я користувача:</label>
 <input type="text" id="username" name="username">`,
     preview: (
-      <div className="flex flex-col items-center gap-4" >
+      <div className="flex flex-col items-center gap-4">
         <label for="username">Ім'я користувача:</label>
-        <input  className="border border-gray-400 mb-2 rounded-2xl p-2" type="text" id="username" name="username" />
+        <input
+          className="border border-gray-400 mb-2 rounded-2xl p-2"
+          type="text"
+          id="username"
+          name="username"
+        />
         <table>
           <thead>
             <tr className="bg-gray-500">
@@ -3076,4 +3072,1705 @@ export const htmlCheatsData = [
       </div>
     ),
   },
+  {
+    title: "<legend></legend>",
+    description:
+      "Заголовок до елементів, що згруповані за допомогою тега `fieldset`.",
+    code: `<fieldset>
+  <legend>Форма реєстрації</legend>
+  <!-- Інші елементи форми -->
+</fieldset>`,
+    preview: (
+      <div>
+        <fieldset>
+          <legend>Форма реєстрації</legend>
+          <p>Тут будуть елементи форми</p>
+        </fieldset>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>align</td>
+              <td>Визначає вирівнювання заголовка (застарілий)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<li></li>",
+    description: "Визначає елемент списку.",
+    code: `<ul>
+  <li>Перший пункт</li>
+  <li>Другий пункт</li>
+</ul>`,
+    preview: (
+      <div>
+        <ul>
+          <li>Перший пункт</li>
+          <li>Другий пункт</li>
+        </ul>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>value</td>
+              <td>Встановлює номер пункта для впорядкованого списку</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>Визначає тип маркера (застарілий)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<link>",
+    description:
+      "Тег `link` служить для зв'язку html-документа із зовнішнім файлом.",
+    code: `<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.ico">`,
+    preview: (
+      <div>
+        <p>Цей тег не має візуального відображення на сторінці</p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>href</td>
+              <td>Шлях до зв'язаного ресурсу</td>
+            </tr>
+            <tr>
+              <td>rel</td>
+              <td>Визначає відношення між документами</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>MIME-тип зв'язаного ресурсу</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<main></main>",
+    description: "Визначає основний зміст документа.",
+    code: `<main>
+  <h1>Головний заголовок</h1>
+  <p>Основний вміст сторінки</p>
+</main>`,
+    preview: (
+      <div>
+        <main style={{ border: "1px solid #ccc", padding: "10px" }}>
+          <h1>Головний заголовок</h1>
+          <p>Основний вміст сторінки</p>
+        </main>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<map></map>",
+    description: "Визначає карту-зображення для картинки",
+    code: `<img src="map.jpg" usemap="#image-map">
+<map name="image-map">
+  <area shape="rect" coords="34,44,270,350" href="#">
+</map>`,
+    preview: (
+      <div>
+        <img src={map} usemap="#image-map" alt="Приклад карти" />
+        <map name="image-map">
+          <area
+            shape="rect"
+            coords="34,44,270,350"
+            href="#"
+            alt="Прямокутна область"
+          />
+        </map>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>Ім'я карти, що зв'язує її з зображенням</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<mark></mark>",
+    description: "Виділяє текст жовтим",
+    code: `<p>Це <mark>виділений</mark> текст</p>`,
+    preview: (
+      <div>
+        <p>
+          Це <mark>виділений</mark> текст
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<menu></menu>",
+    description: "Відображає список пунктів меню.",
+    code: `<menu>
+  <li><button>Копіювати</button></li>
+  <li><button>Вставити</button></li>
+</menu>`,
+    preview: (
+      <div>
+        <menu style={{ listStyle: "none", padding: 0 }}>
+          <li>
+            <button style={{ margin: "5px" }}>Копіювати</button>
+          </li>
+          <li>
+            <button style={{ margin: "5px" }}>Вставити</button>
+          </li>
+        </menu>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>type</td>
+              <td>Визначає тип меню (context, toolbar)</td>
+            </tr>
+            <tr>
+              <td>label</td>
+              <td>Мітка для меню</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<menuitem>",
+    description:
+      "Додає нові пункти в контекстне меню (застарілий, не підтримується в сучасних браузерах)",
+    code: `<menu type="context" id="ctxmenu">
+  <menuitem label="Зберегти" icon="save.png"></menuitem>
+</menu>`,
+    preview: (
+      <div>
+        <p>Цей тег більше не підтримується сучасними браузерами</p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>label</td>
+              <td>Текст пункту меню</td>
+            </tr>
+            <tr>
+              <td>icon</td>
+              <td>Шлях до іконки</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>Тип пункту (checkbox, command, radio)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<meta>",
+    description: "Визначає метадані документа",
+    code: `<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Опис сторінки">`,
+    preview: (
+      <div>
+        <p>
+          Метатеги не відображаються на сторінці, але важливі для SEO та
+          налаштувань
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>charset</td>
+              <td>Кодування символів</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>Ім'я метаданих (viewport, description, keywords)</td>
+            </tr>
+            <tr>
+              <td>content</td>
+              <td>Зміст метатегу</td>
+            </tr>
+            <tr>
+              <td>http-equiv</td>
+              <td>HTTP-заголовок для імітації</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<meter></meter>",
+    description: "Створює візуальну шкалу",
+    code: `<meter value="0.6" min="0" max="1">60%</meter>`,
+    preview: (
+      <div>
+        <p>
+          Використання дискового простору:{" "}
+          <meter value="0.6" min="0" max="1">
+            60%
+          </meter>
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>value</td>
+              <td>Поточне значення</td>
+            </tr>
+            <tr>
+              <td>min</td>
+              <td>Мінімальне значення</td>
+            </tr>
+            <tr>
+              <td>max</td>
+              <td>Максимальне значення</td>
+            </tr>
+            <tr>
+              <td>low</td>
+              <td>Межа низького значення</td>
+            </tr>
+            <tr>
+              <td>high</td>
+              <td>Межа високого значення</td>
+            </tr>
+            <tr>
+              <td>optimum</td>
+              <td>Оптимальне значення</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<nav></nav>",
+    description: "Набір навігаційних посилань",
+    code: `<nav>
+  <a href="/">Головна</a>
+  <a href="/about">Про нас</a>
+  <a href="/contact">Контакти</a>
+</nav>`,
+    preview: (
+      <div>
+        <nav
+          style={{
+            display: "flex",
+            gap: "15px",
+            padding: "10px",
+            background: "green",
+          }}
+        >
+          <a className="cursor-pointer">Головна</a>
+          <a className="cursor-pointer">Про нас</a>
+          <a className="cursor-pointer">Контакти</a>
+        </nav>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<noscript></noscript>",
+    description:
+      "Визначає альтернативний контент для користувачів у котрих не працює JavaScript",
+    code: `<noscript>
+  <p>Будь ласка, увімкніть JavaScript для коректної роботи сайту</p>
+</noscript>`,
+    preview: (
+      <div>
+        <noscript>
+          <p style={{ color: "red" }}>
+            Будь ласка, увімкніть JavaScript для коректної роботи сайту
+          </p>
+        </noscript>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<object></object>",
+    description: "Визначає вбудований об'єкт",
+    code: `<object data="movie.swf" type="application/x-shockwave-flash">
+  <param name="movie" value="movie.swf">
+</object>`,
+    preview: (
+      <div>
+        <object
+          data="https://example.com/flash.swf"
+          type="application/x-shockwave-flash"
+          style={{ width: "300px", height: "200px", background: "#eee" }}
+        >
+          <p>Ваш браузер не підтримує Flash</p>
+        </object>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data</td>
+              <td>URL вбудованого ресурсу</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>MIME-тип об'єкта</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>Ширина об'єкта</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>Висота об'єкта</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<ol></ol>",
+    description: "Визначає впорядкований список.",
+    code: `<ol>
+  <li>Перший пункт</li>
+  <li>Другий пункт</li>
+</ol>`,
+    preview: (
+      <div>
+        <ol>
+          <li>Перший пункт</li>
+          <li>Другий пункт</li>
+        </ol>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>type</td>
+              <td>Тип нумерації (1, A, a, I, i)</td>
+            </tr>
+            <tr>
+              <td>start</td>
+              <td>Початкове значення нумерації</td>
+            </tr>
+            <tr>
+              <td>reversed</td>
+              <td>Зворотній порядок нумерації</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<optgroup></optgroup>",
+    description: "Групує список опцій.",
+    code: `<select>
+  <optgroup label="Фрукти">
+    <option>Яблуко</option>
+    <option>Банан</option>
+  </optgroup>
+  <optgroup label="Овочі">
+    <option>Морква</option>
+    <option>Картопля</option>
+  </optgroup>
+</select>`,
+    preview: (
+      <div>
+        <select>
+          <optgroup label="Фрукти">
+            <option>Яблуко</option>
+            <option>Банан</option>
+          </optgroup>
+          <optgroup label="Овочі">
+            <option>Морква</option>
+            <option>Картопля</option>
+          </optgroup>
+        </select>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>label</td>
+              <td>Назва групи (обов'язковий атрибут)</td>
+            </tr>
+            <tr>
+              <td>disabled</td>
+              <td>Відключає групу</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<option></option>",
+    description: "Створює пункт списку.",
+    code: `<select>
+  <option value="apple">Яблуко</option>
+  <option value="banana" selected>Банан</option>
+</select>`,
+    preview: (
+      <div>
+        <select>
+          <option value="apple">Яблуко</option>
+          <option value="banana" selected>
+            Банан
+          </option>
+        </select>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>value</td>
+              <td>Значення, яке буде відправлено на сервер</td>
+            </tr>
+            <tr>
+              <td>selected</td>
+              <td>Визначає обраний пункт за замовчуванням</td>
+            </tr>
+            <tr>
+              <td>disabled</td>
+              <td>Робить пункт недоступним для вибору</td>
+            </tr>
+            <tr>
+              <td>label</td>
+              <td>Альтернативний текст для відображення</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<output></output>",
+    description: "Визначає результат розрахунку.",
+    code: `<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <input type="number" id="a" value="10"> +
+  <input type="number" id="b" value="20"> =
+  <output name="result" for="a b">30</output>
+</form>`,
+    preview: (
+      <div>
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+          <input type="number" id="a" value="10" style={{ width: "50px" }} /> +
+          <input type="number" id="b" value="20" style={{ width: "50px" }} /> =
+          <output name="result" for="a b">
+            30
+          </output>
+        </form>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>for</td>
+              <td>ID елементів, від яких залежить результат</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>Ім'я елемента</td>
+            </tr>
+            <tr>
+              <td>form</td>
+              <td>ID пов'язаної форми</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<p></p>",
+    description: "Визначає текстовий абзац.",
+    code: `<p>Це звичайний абзац тексту.</p>
+<p>Це інший абзац.</p>`,
+    preview: (
+      <div>
+        <p>Це звичайний абзац тексту.</p>
+        <p>Це інший абзац.</p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<param>",
+    description: "Задає параметри для об'єктів.",
+    code: `<object data="game.swf">
+  <param name="quality" value="high">
+</object>`,
+    preview: (
+      <div>
+        <p>
+          Цей тег використовується всередині &lt;object&gt; та не має
+          візуального відображення
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>Ім'я параметра</td>
+            </tr>
+            <tr>
+              <td>value</td>
+              <td>Значення параметра</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<picture></picture>",
+    description:
+      "Контейнер для кількох елементів <source>, які підтримують елемент <img>",
+    code: `<picture>
+  <source media="(min-width: 1200px)" srcset="large.jpg">
+  <source media="(min-width: 800px)" srcset="medium.jpg">
+  <img src="small.jpg" alt="Альтернативний текст">
+</picture>`,
+    preview: (
+      <div>
+        <picture>
+          <source media="(min-width: 800px)" srcSet={map} />
+          <img src={map} alt="Приклад" style={{ maxWidth: "100%" }} />
+        </picture>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<pre></pre>",
+    description: "Виводить попередньо відформатований текст.",
+    code: `<pre>
+function hello() {
+  console.log("Hello, world!");
+}
+</pre>`,
+    preview: (
+      <div>
+        <pre
+          style={{
+            border: "1px solid #ccc",
+            padding: "10px",
+            borderRadius: "4px",
+            fontFamily: "monospace",
+            whiteSpace: "pre",
+            overflowX: "auto",
+          }}
+        >
+          {`function hello() {
+  console.log("Hello, world!");
+}`}
+        </pre>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<progress></progress>",
+    description: "Відображає хід виконання завдання.",
+    code: `<progress value="70" max="100">70%</progress>`,
+    preview: (
+      <div>
+        <p>Завантаження файлу:</p>
+        <progress value="70" max="100">
+          70%
+        </progress>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>value</td>
+              <td>Поточне значення прогресу</td>
+            </tr>
+            <tr>
+              <td>max</td>
+              <td>Максимальне значення (за замовчуванням 1)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<q></q>",
+    description: "Коротка цитата.",
+    code: `<p>Як сказав Ейнштейн: <q>Все має бути максимально простим, але не простіше.</q></p>`,
+    preview: (
+      <div>
+        <p>
+          Як сказав Ейнштейн:{" "}
+          <q>Все має бути максимально простим, але не простіше.</q>
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>cite</td>
+              <td>URL джерела цитати</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<rp></rp>",
+    description:
+      "Що показати в браузеру, котрий не має підтримки рубінових анотацій.",
+    code: `<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>`,
+    preview: (
+      <div>
+        <ruby>
+          漢 <rp>(</rp>
+          <rt>Kan</rt>
+          <rp>)</rp>字 <rp>(</rp>
+          <rt>ji</rt>
+          <rp>)</rp>
+        </ruby>
+        <p>
+          <small>У сучасних браузерах дужки не відображаються</small>
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<rt></rt>",
+    description:
+      "Додає анотацію зверху чи знизу від тексту (для рубінових анотацій).",
+    code: `<ruby>
+  漢 <rt>Kan</rt>
+  字 <rt>ji</rt>
+</ruby>`,
+    preview: (
+      <div>
+        <ruby style={{ fontSize: "24px" }}>
+          漢 <rt style={{ fontSize: "12px" }}>Kan</rt>字{" "}
+          <rt style={{ fontSize: "12px" }}>ji</rt>
+        </ruby>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<ruby></ruby>",
+    description:
+      "Додає пояснення до тексту (використовується для східноазійських мов).",
+    code: `<ruby>
+  東京 <rt>Tokyo</rt>
+</ruby>`,
+    preview: (
+      <div>
+        <ruby style={{ fontSize: "24px" }}>
+          東京 <rt style={{ fontSize: "12px" }}>Tokyo</rt>
+        </ruby>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<s></s>",
+    description: "Визначає текст застарілим та закреслює його.",
+    code: `<p><s>Ціна: 1000 грн</s> Нова ціна: 800 грн</p>`,
+    preview: (
+      <div>
+        <p>
+          <s>Ціна: 1000 грн</s> Нова ціна: 800 грн
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<samp></samp>",
+    description: "Визначає текст як вивід програми або скрипта.",
+    code: `<p>Помилка: <samp>File not found</samp></p>`,
+    preview: (
+      <div>
+        <p>
+          Помилка:{" "}
+          <samp style={{ fontFamily: "monospace" }}>File not found</samp>
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<script></script>",
+    description: "Додає на веб-сторінку JavaScript скрипт.",
+    code: `<script>
+  alert('Привіт, світе!');
+</script>`,
+    preview: (
+      <div>
+        <p>Цей тег не має візуального відображення</p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>src</td>
+              <td>URL зовнішнього скрипта</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>MIME-тип скрипта</td>
+            </tr>
+            <tr>
+              <td>async</td>
+              <td>Асинхронне виконання</td>
+            </tr>
+            <tr>
+              <td>defer</td>
+              <td>Відкладенне виконання</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<section></section>",
+    description: "Задає розділ документу.",
+    code: `<section>
+  <h2>Заголовок розділу</h2>
+  <p>Вміст розділу...</p>
+</section>`,
+    preview: (
+      <div>
+        <section
+          style={{
+            border: "1px solid #ddd",
+            padding: "15px",
+            margin: "10px 0",
+          }}
+        >
+          <h2 style={{ marginTop: 0 }}>Заголовок розділу</h2>
+          <p>Вміст розділу...</p>
+        </section>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<select></select>",
+    description: "Створює елемент введення у вигляді списку.",
+    code: `<select>
+  <option value="1">Перший пункт</option>
+  <option value="2">Другий пункт</option>
+</select>`,
+    preview: (
+      <div>
+        <select style={{ padding: "5px", minWidth: "150px" }}>
+          <option value="1">Перший пункт</option>
+          <option value="2">Другий пункт</option>
+        </select>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>name</td>
+              <td>Ім'я елемента для форми</td>
+            </tr>
+            <tr>
+              <td>multiple</td>
+              <td>Дозволяє вибирати кілька варіантів</td>
+            </tr>
+            <tr>
+              <td>size</td>
+              <td>Кількість видимих рядків</td>
+            </tr>
+            <tr>
+              <td>disabled</td>
+              <td>Відключає елемент</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<small></small>",
+    description: "Відображає текст зі зменшеним розміром шрифту.",
+    code: `<p>Основний текст <small>Додатковий дрібний текст</small></p>`,
+    preview: (
+      <div>
+        <p>
+          Основний текст <small>Додатковий дрібний текст</small>
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<source>",
+    description: "Визначає альтернативне джерело медіа-файлу для відтворення.",
+    code: `<video controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+</video>`,
+    preview: (
+      <div>
+        <p>
+          Цей тег використовується всередині &lt;audio&gt; або &lt;video&gt;
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>src</td>
+              <td>Шлях до медіафайлу</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>MIME-тип файлу</td>
+            </tr>
+            <tr>
+              <td>media</td>
+              <td>Медіа-запит для адаптивного вибору</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<span></span>",
+    description: "Визначає унікальний ідентифікатор частини тексту.",
+    code: `<p>Це <span style="color: red;">червоний</span> текст</p>`,
+    preview: (
+      <div>
+        <p>
+          Це <span style={{ color: "red" }}>червоний</span> текст
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<strike></strike>",
+    description: "Відображає текст закресленим (застарілий тег).",
+    code: `<p><strike>Закреслений текст</strike></p>`,
+    preview: (
+      <div>
+        <p>
+          <strike>Закреслений текст</strike>
+        </p>
+        <p>
+          <small>
+            Примітка: Замість &lt;strike&gt; використовуйте &lt;s&gt; або CSS
+          </small>
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<strong></strong>",
+    description: "Визначає важливий текст.",
+    code: `<p>Це <strong>дуже важливий</strong> текст</p>`,
+    preview: (
+      <div>
+        <p>
+          Це <strong>дуже важливий</strong> текст
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<style></style>",
+    description: "Визначає стиль елементів веб-сторінки.",
+    code: `<style>
+  body { font-family: Arial; }
+  h1 { color: blue; }
+</style>`,
+    preview: (
+      <div>
+        <p>Цей тег не має візуального відображення</p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>type</td>
+              <td>MIME-тип (за замовчуванням "text/css")</td>
+            </tr>
+            <tr>
+              <td>media</td>
+              <td>Для яких медіа застосовувати стилі</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<sub></sub>",
+    description: "Відображає текст у вигляді нижнього індексу.",
+    code: `<p>Формула води: H<sub>2</sub>O</p>`,
+    preview: (
+      <div>
+        <p>
+          Формула води: H<sub>2</sub>O
+        </p>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+  {
+    title: "<summary></summary>",
+    description: "Визначає заголовок для тегу &lt;details&gt;.",
+    code: `<details>
+  <summary>Докладніше</summary>
+  <p>Прихований вміст, який можна розгорнути</p>
+</details>`,
+    preview: (
+      <div>
+        <details
+          style={{
+            border: "1px solid #aaa",
+            padding: "10px",
+            borderRadius: "4px",
+          }}
+        >
+          <summary>Докладніше</summary>
+          <p style={{ marginTop: "10px" }}>
+            Прихований вміст, який можна розгорнути
+          </p>
+        </details>
+        <table>
+          <thead>
+            <tr className="bg-gray-500">
+              <th>Атрибут</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>-</td>
+              <td>Не має унікальних атрибутів</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+  },
+
+  {
+    title: "<sup></sup>",
+    description: "Відображає шрифт у вигляді верхнього індексу.",
+    code: `<p>E = mc<sup>2</sup></p>`,
+    preview: (
+      <p>
+        E = mc<sup>2</sup>
+      </p>
+    ),
+  },
+  {
+    title: "<table></table>",
+    description: "Задає таблицю на HTML-сторінці.",
+    code: `<table>
+  <tr>
+    <th>Ім'я</th>
+    <th>Вік</th>
+  </tr>
+  <tr>
+    <td>Іван</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Марія</td>
+    <td>25</td>
+  </tr>
+</table>`,
+    preview: (
+      <table>
+        <thead>
+          <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Іван</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Марія</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "<tbody></tbody>",
+    description: "Визначає тіло таблиці.",
+    code: `<table>
+  <thead>
+    <tr>
+      <th>Ім'я</th>
+      <th>Вік</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Іван</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Марія</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>`,
+    preview: (
+      <table>
+        <thead>
+          <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Іван</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Марія</td>
+            <td>25</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "<td></td>",
+    description: "Визначає комірку таблиці.",
+    code: `<table>
+  <tr>
+    <td>Рядок 1, Колонка 1</td>
+    <td>Рядок 1, Колонка 2</td>
+  </tr>
+  <tr>
+    <td>Рядок 2, Колонка 1</td>
+    <td>Рядок 2, Колонка 2</td>
+  </tr>
+</table>`,
+    preview: (
+      <table>
+        <tbody>
+          <tr>
+            <td>Рядок 1, Колонка 1</td>
+            <td>Рядок 1, Колонка 2</td>
+          </tr>
+          <tr>
+            <td>Рядок 2, Колонка 1</td>
+            <td>Рядок 2, Колонка 2</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "<textarea></textarea>",
+    description: "Область введення багаторядкового тексту.",
+    code: `<textarea rows="4" cols="50">
+Введіть тут текст...
+</textarea>`,
+    preview: (
+      <textarea rows="4" cols="50">
+        Введіть тут текст...
+      </textarea>
+    ),
+  },
+  {
+    title: "<tfoot></tfoot>",
+    description: "Задає нижній колонтитул таблиці.",
+    code: `<table>
+  <tr>
+    <th>Сума</th>
+    <td>100 грн</td>
+  </tr>
+  <tfoot>
+    <tr>
+      <th>Всього</th>
+      <td>100 грн</td>
+    </tr>
+  </tfoot>
+</table>`,
+    preview: (
+      <table>
+        <tbody>
+          <tr>
+            <th>Сума</th>
+            <td>100 грн</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Всього</th>
+            <td>100 грн</td>
+          </tr>
+        </tfoot>
+      </table>
+    ),
+  },
+  {
+    title: "<th></th>",
+    description: "Визначає клітинку-заголовок таблиці.",
+    code: `<table>
+  <tr>
+    <th>Ім'я</th>
+    <th>Вік</th>
+  </tr>
+  <tr>
+    <td>Іван</td>
+    <td>30</td>
+  </tr>
+</table>`,
+    preview: (
+      <table>
+        <thead>
+          <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Іван</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "<thead></thead>",
+    description: "Визначає групу заголовків HTML-таблиці.",
+    code: `<table>
+  <thead>
+    <tr>
+      <th>Ім'я</th>
+      <th>Вік</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Іван</td>
+      <td>30</td>
+    </tr>
+  </tbody>
+</table>`,
+    preview: (
+      <table>
+        <thead>
+          <tr>
+            <th>Ім'я</th>
+            <th>Вік</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Іван</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "<time></time>",
+    description: "Визначає час або дату.",
+    code: `<p>Опубліковано <time datetime="2023-10-27">27 жовтня 2023</time></p>`,
+    preview: (
+      <p>
+        Опубліковано <time dateTime="2023-10-27">27 жовтня 2023</time>
+      </p>
+    ),
+  },
+  {
+    title: "<title></title>",
+    description: "Визначає заголовок веб-сторінки.",
+    code: `<head>
+  <title>Заголовок сторінки</title>
+</head>`,
+    preview: (
+      <p className="text-sm italic text-gray-600">
+        (Заголовок відображається у вкладці браузера)
+      </p>
+    ),
+  },
+  {
+    title: "<tr></tr>",
+    description: "Визначає рядок в таблиці.",
+    code: `<table>
+  <tr>
+    <td>Комірка 1</td>
+    <td>Комірка 2</td>
+  </tr>
+</table>`,
+    preview: (
+      <table>
+        <tbody>
+          <tr>
+            <td>Комірка 1</td>
+            <td>Комірка 2</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "<track>",
+    description: "Визначає текстову доріжку до медіа-елементів.",
+    code: `<video controls>
+  <source src="video.mp4" type="video/mp4">
+  <track kind="subtitles" src="subtitles_uk.vtt" srclang="uk" label="Українська">
+</video>`,
+    preview: (
+      <div className="flex flex-col items-center">
+      <video controls style={{ maxWidth: "300px" }}>
+        <source src={video} type="video/mp4" />
+        <track
+          kind="subtitles"
+          src="subtitles_uk.vtt"
+          srclang="uk"
+          label="Українська"
+        />
+        Ваш браузер не підтримує відтворення відео.
+      </video>
+      </div>
+    ),
+  },
+  {
+    title: "<tt></tt>",
+    description: "Відображає текст моношининним шрифтом.",
+    code: `<p>Текст <tt>моноширинним</tt> шрифтом.</p>`,
+    preview: (
+      <p>
+        Текст <tt>моноширинним</tt> шрифтом.
+      </p>
+    ),
+  },
+  {
+    title: "<u></u>",
+    description: "Визначає підкреслений текст.",
+    code: `<p><u>Підкреслений текст</u></p>`,
+    preview: (
+      <p>
+        <u>Підкреслений текст</u>
+      </p>
+    ),
+  },
+  {
+    title: "<ul></ul>",
+    description: "Визначає позначений(ненумерований) список.",
+    code: `<ul>
+  <li>Пункт 1</li>
+  <li>Пункт 2</li>
+  <li>Пункт 3</li>
+</ul>`,
+    preview: (
+      <ul>
+        <li>Пункт 1</li>
+        <li>Пункт 2</li>
+        <li>Пункт 3</li>
+      </ul>
+    ),
+  },
+  {
+    title: "<var></var>",
+    description:
+      "Використовується для виділення змінних з комп'ютерних програм.",
+    code: `<p>Значення змінної <var>x</var> дорівнює 10.</p>`,
+    preview: (
+      <p>
+        Значення змінної <var>x</var> дорівнює 10.
+      </p>
+    ),
+  },
+  {
+    title: "<video></video>",
+    description: "Відображає відео на сайті.",
+    code: `<video controls width="300">
+  <source src="video.mp4" type="video/mp4">
+  Ваш браузер не підтримує відтворення відео.
+</video>`,
+    preview: (
+      <div className="flex flex-col items-center">
+      <video controls width="300">
+        <source src={video} type="video/mp4" />
+        Ваш браузер не підтримує відтворення відео.
+      </video>
+      </div>
+    ),
+  },
+  {
+    title: "<wbr>",
+    description:
+      "Вказує браузеру місце, де допускається робити перенос рядка в тексті.",
+    code: `<p>Дужедовгесловоякеможебутиперенесено<wbr>нановийрядок.</p>`,
+    preview: (
+      <p>
+        Дужедовгесловоякеможебутиперенесено
+        <wbr />
+        <br />нановийрядок.
+      </p>
+    ),
+  }
 ];

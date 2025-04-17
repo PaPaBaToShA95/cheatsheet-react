@@ -1,58 +1,64 @@
 {
-  "hash": "9d0b20c9",
+  "hash": "a9485c69",
   "configHash": "e5e436e1",
-  "lockfileHash": "20f84280",
-  "browserHash": "1bbdfa7c",
+  "lockfileHash": "549a3930",
+  "browserHash": "be8cdcc0",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "f8320d4a",
+      "fileHash": "8176c633",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "e1efe558",
+      "fileHash": "77fbde2a",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "470352c9",
+      "fileHash": "f38d0c61",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "9416c5c1",
+      "fileHash": "f2d590dd",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "91b4cb3f",
+      "fileHash": "878fd6e2",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "d3e50009",
+      "fileHash": "74ed9603",
       "needsInterop": false
     },
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "6814513c",
+      "fileHash": "da958b51",
+      "needsInterop": false
+    },
+    "react-transition-group": {
+      "src": "../../node_modules/react-transition-group/esm/index.js",
+      "file": "react-transition-group.js",
+      "fileHash": "ebbf242b",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-N64UF633": {
-      "file": "chunk-N64UF633.js"
-    },
     "chunk-XWSVSGZS": {
       "file": "chunk-XWSVSGZS.js"
+    },
+    "chunk-N64UF633": {
+      "file": "chunk-N64UF633.js"
     },
     "chunk-VCDLJVZS": {
       "file": "chunk-VCDLJVZS.js"
