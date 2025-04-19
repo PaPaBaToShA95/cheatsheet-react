@@ -34,7 +34,7 @@ export const GitCheats = ({ searchTerm }) => {
         <tbody>
           {filtered.length > 0 ? (
             filtered.map((item, index) => (
-              <CheatSection key={index} {...item} />
+              <CheatSection key={index} {...item} searchTerm={searchTerm} />
             ))
           ) : (
             <tr>

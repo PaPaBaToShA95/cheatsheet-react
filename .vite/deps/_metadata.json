@@ -2,58 +2,67 @@
   "hash": "a9485c69",
   "configHash": "e5e436e1",
   "lockfileHash": "549a3930",
-  "browserHash": "be8cdcc0",
+  "browserHash": "0d19678d",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "8176c633",
+      "fileHash": "b287903b",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "77fbde2a",
+      "fileHash": "109d4f9a",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "f38d0c61",
+      "fileHash": "1f2b7dac",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "f2d590dd",
+      "fileHash": "d0bfdf93",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "878fd6e2",
+      "fileHash": "6317d0dd",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "74ed9603",
+      "fileHash": "e7a81281",
       "needsInterop": false
     },
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "da958b51",
+      "fileHash": "71172044",
       "needsInterop": false
     },
     "react-transition-group": {
       "src": "../../node_modules/react-transition-group/esm/index.js",
       "file": "react-transition-group.js",
-      "fileHash": "ebbf242b",
+      "fileHash": "de829b20",
+      "needsInterop": false
+    },
+    "framer-motion/client": {
+      "src": "../../node_modules/framer-motion/dist/es/client.mjs",
+      "file": "framer-motion_client.js",
+      "fileHash": "3e56c6c6",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-DQHQSBBP": {
+      "file": "chunk-DQHQSBBP.js"
+    },
     "chunk-XWSVSGZS": {
       "file": "chunk-XWSVSGZS.js"
     },

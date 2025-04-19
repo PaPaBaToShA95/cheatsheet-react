@@ -21,7 +21,9 @@ export const JsCheats = ({ searchTerm }) => {
 
       <div className="space-y-6">
         {filtered.length > 0 ? (
-          filtered.map((item, index) => <CheatSection key={index} {...item} />)
+          filtered.map((item, index) => (
+            <CheatSection key={index} {...item} searchTerm={searchTerm} />
+          ))
         ) : (
           <p className="text-center text-gray-400 text-4xl">
             Нічого не знайдено 🤷‍♂️ <br />
