@@ -1,76 +1,85 @@
 {
-  "hash": "a9485c69",
+  "hash": "4875408b",
   "configHash": "e5e436e1",
-  "lockfileHash": "549a3930",
-  "browserHash": "0d19678d",
+  "lockfileHash": "cd789263",
+  "browserHash": "3088efee",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "b287903b",
+      "fileHash": "d3bf241f",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "109d4f9a",
+      "fileHash": "d1697c6e",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "1f2b7dac",
+      "fileHash": "764b03c0",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "d0bfdf93",
+      "fileHash": "ee57e3e7",
       "needsInterop": true
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "ed892cf8",
+      "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "6317d0dd",
+      "fileHash": "cf95c565",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "e7a81281",
+      "fileHash": "6643e417",
       "needsInterop": false
     },
-    "framer-motion": {
-      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
-      "file": "framer-motion.js",
-      "fileHash": "71172044",
+    "firebase/auth": {
+      "src": "../../node_modules/firebase/auth/dist/esm/index.esm.js",
+      "file": "firebase_auth.js",
+      "fileHash": "548173f5",
       "needsInterop": false
     },
-    "react-transition-group": {
-      "src": "../../node_modules/react-transition-group/esm/index.js",
-      "file": "react-transition-group.js",
-      "fileHash": "de829b20",
+    "firebase/app": {
+      "src": "../../node_modules/firebase/app/dist/esm/index.esm.js",
+      "file": "firebase_app.js",
+      "fileHash": "8746c557",
       "needsInterop": false
     },
-    "framer-motion/client": {
-      "src": "../../node_modules/framer-motion/dist/es/client.mjs",
-      "file": "framer-motion_client.js",
-      "fileHash": "3e56c6c6",
+    "firebase/firestore": {
+      "src": "../../node_modules/firebase/firestore/dist/esm/index.esm.js",
+      "file": "firebase_firestore.js",
+      "fileHash": "293e4f0e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-DQHQSBBP": {
-      "file": "chunk-DQHQSBBP.js"
+    "chunk-JJ26KMNR": {
+      "file": "chunk-JJ26KMNR.js"
     },
-    "chunk-XWSVSGZS": {
-      "file": "chunk-XWSVSGZS.js"
+    "chunk-PBEJCMES": {
+      "file": "chunk-PBEJCMES.js"
     },
-    "chunk-N64UF633": {
-      "file": "chunk-N64UF633.js"
+    "chunk-U5G3TOY2": {
+      "file": "chunk-U5G3TOY2.js"
     },
-    "chunk-VCDLJVZS": {
-      "file": "chunk-VCDLJVZS.js"
+    "chunk-6GAV2S6I": {
+      "file": "chunk-6GAV2S6I.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
     }
   }
 }

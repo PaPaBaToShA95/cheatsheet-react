@@ -1,28 +1,5 @@
 @import "tailwindcss";
 
-h1 {
-    @apply text-3xl font-bold;
-}
-
-h2 {
-    @apply text-2xl font-bold;
-}
-
-h3 {
-    @apply text-xl font-bold;
-}
-
-h4 {
-    @apply text-lg font-bold;
-}
-
-h5 {
-    @apply text-base font-bold;
-}
-
-h6 {
-    @apply text-sm font-bold;
-}
 
 th {
     width: -webkit-fill-available;
@@ -139,7 +116,7 @@ body{
     width: 100%;
     overflow-x: hidden;
     scrollbar-color: #888 #f1f1f1;
-    @apply bg-gray-950;
+    background-color: black;
 
 
 }

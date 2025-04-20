@@ -15,6 +15,7 @@ import Contact from "../pages/Contact";
 import Project from "../pages/Project";
 import NotFound from "../pages/NotFound";
 import BuggyComponent from "../components/BuggyComponent";
+import Login from "../pages/Login"; 
 
 export default function Router({ searchTerm }) {
   return (
@@ -44,6 +45,7 @@ export default function Router({ searchTerm }) {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/project" element={<Project />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/test_error" element={<BuggyComponent />} />
     </Routes>
