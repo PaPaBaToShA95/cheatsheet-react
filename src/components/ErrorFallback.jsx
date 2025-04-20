@@ -29,9 +29,9 @@ export default function ErrorFallback() {
         alt="Astronaut in distress"
         className="w-64 h-auto mb-10 rounded-lg shadow-lg floating"
       />
-     
+
       <Link
-        to="/"
+        to="https://papabatosha95.github.io/cheatsheet-react/"
         className="bg-yellow-400 hover:bg-yellow-300 text-black px-6 py-3 rounded-full text-lg font-semibold transition-transform hover:scale-105"
       >
         Повернутися на орбіту
