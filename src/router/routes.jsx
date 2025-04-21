@@ -1,5 +1,4 @@
-
-import { Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import MainPage from "../pages/MainPage";
 import HtmlCheats from "../pages/HtmlCheats";
 import CssCheats from "../pages/CssCheats";
@@ -15,16 +14,15 @@ import Contact from "../pages/Contact";
 import Project from "../pages/Project";
 import NotFound from "../pages/NotFound";
 import BuggyComponent from "../components/BuggyComponent";
-import Login from "../pages/Login"; 
+import Login from "../pages/Login";
+import Profile from "../pages/Profile";
 
 export default function Router({ searchTerm }) {
   return (
+  
     <Routes>
       <Route path="/" element={<MainPage />} />
-      <Route
-        path="/html"
-        element={<HtmlCheats searchTerm={searchTerm} />}
-      />
+      <Route path="/html" element={<HtmlCheats searchTerm={searchTerm} />} />
       <Route path="/css" element={<CssCheats searchTerm={searchTerm} />} />
       <Route path="/js" element={<JsCheats searchTerm={searchTerm} />} />
       <Route path="/react" element={<ReactCheats searchTerm={searchTerm} />} />
@@ -46,8 +44,10 @@ export default function Router({ searchTerm }) {
       <Route path="/contact" element={<Contact />} />
       <Route path="/project" element={<Project />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/profile/:id" element={<Profile />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/test_error" element={<BuggyComponent />} />
     </Routes>
+  
   );
 }
