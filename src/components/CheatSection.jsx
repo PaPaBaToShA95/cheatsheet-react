@@ -2,7 +2,7 @@ import { highlightMatch } from "../hooks/highlightMatch";
 import React from "react";
 
 const CheatSection = ({ title, description, code, preview, searchTerm }) => (
-  <div className="bg-gray-800 p-4 rounded-xl mb-6">
+  <div className="bg-gray-800 p-4 rounded-xl mb-6 w-full">
     <p className="font-bold mb-2 text-center text-4xl">
       {highlightMatch(title, searchTerm)}
     </p>

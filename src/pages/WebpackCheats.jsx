@@ -10,7 +10,7 @@ export const WebpackCheats = ({ searchTerm }) => {
   );
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
+    <div className="p-2 max-w-7xl mx-auto">
       <header className="text-center mb-10">
         <h1 className="text-4xl font-bold mb-4">WebPack</h1>
         <p className="text-xl text-gray-400">

@@ -7,7 +7,7 @@ export const Project = () => {
   
 
   return (
-    <div className="p-6 max-w-7xl text-center mx-auto">
+    <div className="p-2 max-w-7xl text-center mx-auto">
       <p className="text-xl text-gray-400 space-y-4">
         <span className="block text-4xl text-center font-bold">
           🚀 CheatSheet для веб-розробника 🚀
