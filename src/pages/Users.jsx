@@ -53,7 +53,7 @@ const Users = () => {
   };
 
 
-  const handleAddFriend = (userId, userName) => {ʼ
+  const handleAddFriend = (userId, userName) => {
     if (currentUser && currentUser.uid === userId) {
       console.log("Ви не можете додати себе в друзі.");
       return;

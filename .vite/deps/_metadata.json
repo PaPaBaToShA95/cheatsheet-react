@@ -1,88 +1,94 @@
 {
-  "hash": "4875408b",
+  "hash": "ce9e5720",
   "configHash": "e5e436e1",
-  "lockfileHash": "cd789263",
-  "browserHash": "b7553527",
+  "lockfileHash": "a6b311ff",
+  "browserHash": "9680c152",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "54b57057",
+      "fileHash": "ef25acbb",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "d4b27e4e",
+      "fileHash": "ad4ac4f1",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "9f2ff734",
+      "fileHash": "25a2ebb8",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "2b490969",
+      "fileHash": "f5db2851",
       "needsInterop": true
     },
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "5b47cf9f",
+      "fileHash": "de9d76e2",
       "needsInterop": false
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "8b59b8e7",
+      "fileHash": "94674624",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "e20c379d",
+      "fileHash": "f3d94065",
       "needsInterop": false
     },
     "firebase/auth": {
       "src": "../../node_modules/firebase/auth/dist/esm/index.esm.js",
       "file": "firebase_auth.js",
-      "fileHash": "223a60da",
+      "fileHash": "20c7a5db",
       "needsInterop": false
     },
     "firebase/app": {
       "src": "../../node_modules/firebase/app/dist/esm/index.esm.js",
       "file": "firebase_app.js",
-      "fileHash": "a66ddd6d",
+      "fileHash": "9b3f1ea1",
       "needsInterop": false
     },
     "firebase/firestore": {
       "src": "../../node_modules/firebase/firestore/dist/esm/index.esm.js",
       "file": "firebase_firestore.js",
-      "fileHash": "375437cf",
+      "fileHash": "0dbd47a9",
       "needsInterop": false
     },
     "express": {
       "src": "../../../../../../node_modules/express/index.js",
       "file": "express.js",
-      "fileHash": "774a275f",
+      "fileHash": "a7a3bcfb",
       "needsInterop": true
+    },
+    "firebase/messaging": {
+      "src": "../../node_modules/firebase/messaging/dist/esm/index.esm.js",
+      "file": "firebase_messaging.js",
+      "fileHash": "c0c8a102",
+      "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-3LWRMNZ7": {
-      "file": "chunk-3LWRMNZ7.js"
-    },
     "chunk-V5QMNLKU": {
       "file": "chunk-V5QMNLKU.js"
     },
+    "chunk-O5QGBNLJ": {
+      "file": "chunk-O5QGBNLJ.js"
+    },
+    "chunk-3LWRMNZ7": {
+      "file": "chunk-3LWRMNZ7.js"
+    },
     "chunk-W5VMUIAY": {
       "file": "chunk-W5VMUIAY.js"
-    },
-    "chunk-JJ26KMNR": {
-      "file": "chunk-JJ26KMNR.js"
     },
     "chunk-2TUXWMP5": {
       "file": "chunk-2TUXWMP5.js"

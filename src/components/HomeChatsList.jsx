@@ -53,7 +53,7 @@ export default function HomeChatsList() {
               id: docSnap.id,
               otherUserId,
               otherUserName,
-              ...chatData,
+              ...chatData, 
             };
           })
         );
@@ -65,8 +65,9 @@ export default function HomeChatsList() {
       }
     );
 
+
     return () => unsubscribe();
-  }, [currentUser]);
+  }, [currentUser]); 
 
   return (
     <div className="space-y-2">
@@ -80,6 +81,8 @@ export default function HomeChatsList() {
           У вас ще немає активних чатів.
         </div>
       )}
+
+
       {chats.length > 0 &&
         chats.map((chat) => (
           <div
@@ -89,18 +92,15 @@ export default function HomeChatsList() {
           >
             <div className="font-semibold flex justify-between items-center">
               <span>Чат з користувачем {chat.otherUserName}</span>
-              {chat.lastMessage?.senderId !== currentUser.uid && (
+              {chat.unreadCount?.[currentUser.uid] > 0 && (
                 <span className="text-xs text-green-400 bg-green-900 rounded-full px-2 py-0.5">
                   Нове
                 </span>
               )}
             </div>
-            {chat.lastMessageText && ( // Перевіряємо, чи існує поле lastMessageText
+            {chat.lastMessageText && (
               <div className="text-sm text-gray-400 truncate">
-                {" "}
-                {/* Можливо, колір вже змінений, використовуйте ваш поточний клас */}
-                {chat.lastMessageText}{" "}
-                {/* Читаємо текст з поля lastMessageText */}
+                {chat.lastMessageText}
               </div>
             )}
             {chat.updatedAt?.toDate && (
