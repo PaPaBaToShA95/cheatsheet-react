@@ -135,7 +135,7 @@ const Users = () => {
               <div className="flex flex-row sm:flex-col gap-2 items-center justify-center">
                 {" "}
                 <button
-                  className="px-4 py-2 rounded text-sm bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200 w-full sm:w-auto"
+                  className="px-4 py-2 rounded cursor-pointer text-sm bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200 w-full sm:w-auto"
                   onClick={() => handleMessage(user.id, user.name)}
                   title={`Написати повідомлення ${user.name || "цьому користувачу"}`}
                 >
@@ -143,7 +143,7 @@ const Users = () => {
                 </button>
                 {currentUser.uid !== user.id && (
                   <button
-                    className="px-4 py-2 text-nowrap rounded text-sm bg-green-600 hover:bg-green-700 text-white transition-colors duration-200 w-full sm:w-auto" 
+                    className="px-4 py-2 text-nowrap rounded cursor-pointer text-sm bg-green-600 hover:bg-green-700 text-white transition-colors duration-200 w-full sm:w-auto" 
                     onClick={() => handleAddFriend(user.id, user.name)}
                     title={`Додати ${user.name || "цього користувача"} в друзі`} 
                   >
