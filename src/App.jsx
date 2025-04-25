@@ -12,7 +12,6 @@ export default function App() {
   const { currentUser } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // НОВИЙ стан для загальної кількості непрочитаних повідомлень
   const [totalUnreadCount, setTotalUnreadCount] = useState(0);
 
   const dropdownRef = useRef(null);
@@ -126,7 +125,6 @@ export default function App() {
                   onClick={toggleDropdown}
                   className="flex items-center gap-2 p-2 rounded-full bg-yellow-500 text-black hover:bg-yellow-600 transition-colors"
                 >
-                  {/* Фото користувача */}
                   {avatarUrl && (
                     <img
                       src={avatarUrl}
@@ -134,9 +132,7 @@ export default function App() {
                       className="w-8 h-8 rounded-full"
                     />
                   )}
-                  {/* Ім'я користувача */}
                   <span className="hidden md:inline">{userName}</span>
-                  {/* Відображаємо лічильник непрочитаних біля імені, якщо він > 0 */}
                   {totalUnreadCount > 0 && (
                     <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                        {totalUnreadCount}
@@ -146,7 +142,6 @@ export default function App() {
 
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-50 border border-gray-700">
-                    {/* Кнопка Профіль */}
                     <button
                       onClick={() => {
                         navigate(`/profile/${currentUser.uid}`);
@@ -156,7 +151,7 @@ export default function App() {
                     >
                       Профіль
                     </button>
-                     {/* Кнопка Користувачі */}
+
                     <button
                       onClick={() => {
                         navigate("/users");
@@ -166,24 +161,20 @@ export default function App() {
                     >
                        Користувачі
                     </button>
-                     {/* Кнопка Мої Чати (з лічильником) */}
-                     {/* При кліку перенаправляємо на /chats */}
                     <button
                       onClick={() => {
                         navigate("/chats");
                          setIsDropdownOpen(false);
                     }}
-                      className="block px-4 py-2 text-left w-full hover:bg-gray-700 transition-colors flex justify-between items-center"
+                      className=" px-4 py-2 text-left w-full hover:bg-gray-700 transition-colors flex justify-between items-center"
                     >
                        <span>Мої Чати</span>
-                        {/* Відображаємо лічильник у меню, якщо він > 0 */}
                        {totalUnreadCount > 0 && (
-                           <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full ml-2"> {/* Додав ml-2 для відступу */}
+                           <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full ml-2"> 
                              {totalUnreadCount}
                           </span>
                        )}
                     </button>
-                    {/* Кнопка Вийти */}
                     <button
                       onClick={() =>
                         signOut(auth).then(() => navigate("/login"))
@@ -235,7 +226,6 @@ export default function App() {
           )}
         </div>
       </header>
-
       <main className="flex-1">
         <div className="flex flex-col sm:flex-row gap-4">
           <aside className="hidden sm:block w-56 flex-shrink-0">
@@ -301,7 +291,6 @@ export default function App() {
                     )}
                     <span>{userName}</span>
                   </button>
-                  {/* Кнопка Користувачі в моб меню */}
                    <button
                       onClick={() => {
                         navigate("/users");
@@ -311,7 +300,6 @@ export default function App() {
                     >
                        Користувачі
                     </button>
-                     {/* Кнопка Мої Чати (з лічильником) в моб меню */}
                    <button
                       onClick={() => {
                         navigate("/chats");
@@ -321,12 +309,11 @@ export default function App() {
                     >
                        <span>Мої Чати</span>
                          {totalUnreadCount > 0 && (
-                           <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full ml-2"> {/* Додав ml-2 для відступу */}
+                           <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full ml-2"> 
                              {totalUnreadCount}
                           </span>
                        )}
                     </button>
-                  {/* Кнопка Вийти в моб меню */}
                   <button
                     onClick={() => {
                       signOut(auth).then(() => {
@@ -353,15 +340,11 @@ export default function App() {
               )}
             </nav>
           </div>
-
-          {/* Основной контент для Router */}
           <div className="flex-1 w-full">
             <Router searchTerm={searchTerm} />
           </div>
         </div>
       </main>
-
-      {/* Футер */}
       <footer className="text-center text-gray-500 mt-8 py-4 border-t border-gray-800">
         <div className="container mx-auto px-4">
           <p>
@@ -377,8 +360,6 @@ export default function App() {
           </p>
         </div>
       </footer>
-
-      {/* Кнопка "Наверх" */}
       <button
         className="fixed bottom-5 right-5 p-2 cursor-pointer text-3xl bg-amber-300 hover:bg-amber-400 text-black font-bold py-2 px-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         onClick={scrollToTop}
@@ -387,8 +368,6 @@ export default function App() {
       >
         ⥣
       </button>
-      {/* Монтуємо обробник сповіщень та лічильника */}
-      {/* Передаємо функцію для оновлення загального лічильника */}
       <NotificationHandler setTotalUnreadCount={setTotalUnreadCount} />
     </div>
   );

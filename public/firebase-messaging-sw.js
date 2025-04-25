@@ -1,7 +1,7 @@
+<reference lib="webworker" /> 
 
 importScripts('https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js');
 importScripts('https://www.gstatic.com/firebasejs/10.5.0/firebase-messaging-compat.js');
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyBZeGiDmJwWYDMtIW7qMHSzQKtrZjHfH5s",
@@ -17,7 +17,6 @@ firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
 
-
 messaging.onBackgroundMessage(function (payload) {
     console.log('[firebase-messaging-sw.js] Отримано фонове повідомлення ', payload);
 
@@ -25,7 +24,6 @@ messaging.onBackgroundMessage(function (payload) {
         console.log('[firebase-messaging-sw.js] Фонове повідомлення без даних сповіщення.');
         return null;
     }
-
 
     const notificationTitle = payload.notification.title;
     const notificationOptions = {
@@ -39,7 +37,7 @@ messaging.onBackgroundMessage(function (payload) {
 
 self.addEventListener('notificationclick', function (event) {
     console.log('[firebase-messaging-sw.js] Клік по сповіщенню');
-    event.notification.close(); 
+    event.notification.close();
     const clickData = event.notification.data;
     console.log('Data payload при кліку:', clickData);
 
@@ -49,10 +47,9 @@ self.addEventListener('notificationclick', function (event) {
 
     console.log('Спроба відкрити URL при кліку:', urlToOpen);
 
-
     event.waitUntil(clients.matchAll({
         type: 'window',
-        includeUncontrolled: true 
+        includeUncontrolled: true
     }).then(clientList => {
         for (const client of clientList) {
             if (client.url.includes(self.location.origin)) {
