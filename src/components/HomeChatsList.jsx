@@ -95,9 +95,12 @@ export default function HomeChatsList() {
                 </span>
               )}
             </div>
-            {chat.lastMessage?.text && (
+            {chat.lastMessageText && ( // Перевіряємо, чи існує поле lastMessageText
               <div className="text-sm text-gray-400 truncate">
-                {chat.lastMessage.text}
+                {" "}
+                {/* Можливо, колір вже змінений, використовуйте ваш поточний клас */}
+                {chat.lastMessageText}{" "}
+                {/* Читаємо текст з поля lastMessageText */}
               </div>
             )}
             {chat.updatedAt?.toDate && (

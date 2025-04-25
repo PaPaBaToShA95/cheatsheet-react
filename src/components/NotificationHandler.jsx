@@ -11,9 +11,8 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase"; // Перевірте шлях
 
-// Завантажте ваш звук сповіщення
-// Переконайтеся, що файл notification.mp3 знаходиться у публічній папці вашого проєкту (наприклад, public/sounds/notification.mp3)
-const notificationSound = new Audio("/sounds/notification.mp3"); // Шлях від кореня публічної папки
+
+const notificationSound = new Audio("/cheatsheet-react/sounds/notification.mp3"); 
 
 const NotificationHandler = () => {
   const { currentUser } = useAuth(); // Отримуємо поточного користувача
