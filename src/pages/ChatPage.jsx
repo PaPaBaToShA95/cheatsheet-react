@@ -248,7 +248,7 @@ const ChatPage = () => {
       </div>
       <form
         onSubmit={handleSendMessage}
-        className="flex gap-2 p-4 bg-gray-800 rounded-lg shadow"
+        className="flex gap-2 p-4 bg-gray-800 flex-wrap justify-center rounded-lg shadow"
       >
         <input
           type="text"
