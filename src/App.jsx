@@ -29,6 +29,9 @@ export default function App() {
    { name: "🙋‍♂️ Про Мене", path: "/about" },
    { name: "📬 Контакти", path: "/contact" },
    { name: "🧩 Про проект", path: "/project" },
+   {name : "👥 Користувачі" , path : "/users"},
+   {name : "💬 Чати" , path : "/chats"},
+
  ];
 
   const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
@@ -127,6 +130,14 @@ export default function App() {
                       className="block px-4 py-2 text-left w-full hover:bg-gray-700 transition-colors"
                     >
                       Профіль
+                    </button>
+                    <button
+                      onClick={() => {
+                        navigate("/users");
+                    }}
+                      className="block px-4 py-2 text-left w-full hover:bg-gray-700 transition-colors"
+                    >
+                       Користувачі
                     </button>
                     <button
                       onClick={() =>
@@ -231,12 +242,13 @@ export default function App() {
 
               {currentUser ? (
                 <>
+                
                   <button
                     onClick={() => {
                       navigate(`/profile/${currentUser.uid}`);
                       setIsMobileMenuOpen(false);
                     }}
-                    className="block w-full text-left px-4 py-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700 flex items-center gap-2 transition-colors"
+                    className=" w-full text-left px-4 py-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700 flex items-center gap-2 transition-colors"
                   >
                     {avatarUrl && (
                       <img

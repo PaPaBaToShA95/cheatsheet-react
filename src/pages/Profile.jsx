@@ -60,14 +60,13 @@ export default function Profile() {
           const data = docSnap.data();
           setUserData({
             ...data,
-            languages: Array.isArray(data.languages) ? data.languages : [], // Ensure languages is always an array
+            languages: Array.isArray(data.languages) ? data.languages : [],
           });
         } else if (isCurrentUser) {
-          // Якщо користувач поточний і профілю немає, створюємо його з даних Google Auth
           const newUserData = {
             name: currentUser.displayName || "Новий користувач",
             email: currentUser.email || "",
-            photoURL: currentUser.photoURL || "", // Використовуємо photoURL з Google Auth
+            photoURL: currentUser.photoURL || "",
             bio: "",
             birthDate: "",
             gender: "",
@@ -79,8 +78,7 @@ export default function Profile() {
           await setDoc(docRef, newUserData);
           setUserData(newUserData);
         } else {
-          // Якщо профіль не знайдено і це не поточний користувач
-          setUserData(null); // Або інша логіка для відображення "Профіль не знайдено"
+          setUserData(null);
         }
       } catch (err) {
         console.error("Помилка завантаження:", err);
@@ -90,18 +88,17 @@ export default function Profile() {
       }
     }
 
-    // Перевіряємо, чи є ID користувача перед завантаженням даних
     if (id) {
       fetchUserData();
     } else {
-      setLoading(false); // Якщо ID немає, не завантажуємо і не показуємо завантаження
-      setError("ID користувача не вказано"); // Можна встановити помилку
+      setLoading(false);
+      setError("ID користувача не вказано");
     }
 
     return () => {
       isMounted = false;
     };
-  }, [id, currentUser, isCurrentUser]); // Додано id до залежностей useEffect
+  }, [id, currentUser, isCurrentUser]);
 
   const handleSave = async () => {
     try {
@@ -110,11 +107,9 @@ export default function Profile() {
       }
 
       const userRef = doc(db, "users", id);
-      // Оновлюємо тільки ті поля, які користувач може редагувати
       await updateDoc(userRef, {
         name: userData.name.trim(),
         bio: userData.bio?.trim() || "",
-        // photoURL більше не оновлюється з поля вводу
         birthDate: userData.birthDate,
         gender: userData.gender,
         languages: userData.languages || [],
@@ -135,7 +130,7 @@ export default function Profile() {
 
   const handleLanguageToggle = (language) => {
     setUserData((prev) => {
-      const currentLanguages = prev.languages || []; // Safely handle undefined
+      const currentLanguages = prev.languages || [];
       const newLanguages = currentLanguages.includes(language)
         ? currentLanguages.filter((lang) => lang !== language)
         : [...currentLanguages, language];
@@ -144,11 +139,9 @@ export default function Profile() {
   };
 
   if (loading) return <div className="text-center py-8">Завантаження...</div>;
-  // Оновлено умову відображення помилки/відсутності профілю
   if (error)
     return <div className="text-center py-8 text-red-500">{error}</div>;
   if (!userData && !loading)
-    // Показуємо "Профіль не знайдено" тільки якщо не завантажується і даних немає
     return <div className="text-center py-8">Профіль не знайдено</div>;
 
   return (
@@ -164,13 +157,14 @@ export default function Profile() {
         </div>
       )}
 
-      <h1 className="text-3xl font-bold mb-6">Профіль користувача</h1>
+      <h1 className="text-3xl font-bold mb-6">
+        Профіль користувача:
+        <span className="text-yellow-400 ml-2"> {userData.name} </span>
+      </h1>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {/* Ліва колонка - аватар та основна інформація */}
         <div className="md:col-span-1">
           <div className="flex flex-col items-center mb-6">
-            {/* Відображаємо аватар */}
             {userData.photoURL ? (
               <img
                 src={userData.photoURL}
@@ -178,30 +172,10 @@ export default function Profile() {
                 className="w-40 h-40 rounded-full mb-4 object-cover border-4 border-yellow-400"
               />
             ) : (
-              // Запасний варіант, якщо аватара немає
               <div className="w-40 h-40 rounded-full mb-4 bg-gray-700 border-4 border-yellow-400 flex items-center justify-center">
                 <span className="text-6xl">👤</span>
               </div>
             )}
-
-            {/* Поле для редагування аватара ВИДАЛЕНО */}
-            {/* {editing && (
-              <div className="w-full">
-                <label className="block text-sm mb-1">URL аватара</label>
-                <input
-                  type="text"
-                  value={userData.photoURL}
-                  onChange={(e) =>
-                    setUserData((prev) => ({
-                      ...prev,
-                      photoURL: e.target.value,
-                    }))
-                  }
-                  className="w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-500 focus:outline-none transition-colors"
-                  placeholder="Вставте посилання на зображення"
-                />
-              </div>
-            )} */}
           </div>
 
           <div className="space-y-4">
@@ -228,7 +202,6 @@ export default function Profile() {
           </div>
         </div>
 
-        {/* Центральна колонка - основні дані */}
         <div className="md:col-span-2 space-y-4">
           <div>
             <label className="block text-sm mb-1">Про себе</label>

@@ -16,6 +16,9 @@ import NotFound from "../pages/NotFound";
 import BuggyComponent from "../components/BuggyComponent";
 import Login from "../pages/Login";
 import Profile from "../pages/Profile";
+import Users from "../pages/Users";
+import ChatPage from "../pages/ChatPage";
+import ChatList from "../components/HomeChatsList";
 
 export default function Router({ searchTerm }) {
   return (
@@ -45,6 +48,9 @@ export default function Router({ searchTerm }) {
       <Route path="/project" element={<Project />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile/:id" element={<Profile />} />
+      <Route path="/users" element={<Users />} />
+      <Route path="/chat/:userId" element={<ChatPage />} />
+      <Route path="/chats" element={<ChatList />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/test_error" element={<BuggyComponent />} />
     </Routes>

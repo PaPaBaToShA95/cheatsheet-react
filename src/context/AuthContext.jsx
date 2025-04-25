@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Мемоізація провайдера для оптимізації
+
   const provider = useMemo(() => {
     const googleProvider = new GoogleAuthProvider();
     googleProvider.addScope(
