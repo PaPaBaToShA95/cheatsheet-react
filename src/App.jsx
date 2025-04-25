@@ -1,14 +1,16 @@
+
 import { useNavigate, useLocation } from "react-router-dom";
 import Router from "./router/routes";
 import { useAuth } from "./context/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 import React, { useState, useRef, useEffect } from "react";
+import NotificationHandler from "./components/NotificationHandler";
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showHint, setShowHint] = useState(false);
-  const { currentUser } = useAuth(); 
+  const { currentUser } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -16,27 +18,25 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
- const sections = [
-   { name: "📄 HTML", path: "/html" },
-   { name: "🎨 CSS", path: "/css" },
-   { name: "🧠 JS", path: "/js" },
-   { name: "⚛️ React", path: "/react" },
-   { name: "🌬️ Tailwind", path: "/tailwind" },
-   { name: "🖥️ VSCode", path: "/vscode" },
-   { name: "🔧 Git", path: "/git" },
-   { name: "🥤 Gulp", path: "/gulp" },
-   { name: "📦 Webpack", path: "/webpack" },
-   { name: "🙋‍♂️ Про Мене", path: "/about" },
-   { name: "📬 Контакти", path: "/contact" },
-   { name: "🧩 Про проект", path: "/project" },
-   {name : "👥 Користувачі" , path : "/users"},
-   {name : "💬 Чати" , path : "/chats"},
-
- ];
+  const sections = [
+    { name: "📄 HTML", path: "/html" },
+    { name: "🎨 CSS", path: "/css" },
+    { name: "🧠 JS", path: "/js" },
+    { name: "⚛️ React", path: "/react" },
+    { name: "🌬️ Tailwind", path: "/tailwind" },
+    { name: "🖥️ VSCode", path: "/vscode" },
+    { name: "🔧 Git", path: "/git" },
+    { name: "🥤 Gulp", path: "/gulp" },
+    { name: "📦 Webpack", path: "/webpack" },
+    { name: "🙋‍♂️ Про Мене", path: "/about" },
+    { name: "📬 Контакти", path: "/contact" },
+    { name: "🧩 Про проект", path: "/project" },
+    { name: "👥 Користувачі", path: "/users" },
+    { name: "💬 Чати", path: "/chats" },
+  ];
 
   const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
-
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -55,10 +55,24 @@ export default function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    if (currentUser) {
+      setIsDropdownOpen(false);
+    }
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      setIsDropdownOpen(false);
+    }
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [location.pathname]);
+
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
 
   const avatarUrl = currentUser?.userData?.photoURL || currentUser?.photoURL;
 
@@ -98,7 +112,7 @@ export default function App() {
 
           <div
             onClick={() => navigate("/")}
-            className="text-[40px] lg:text-[100px] font-playfair leading-none font-bold text-center flex-1 cursor-pointer" 
+            className="text-[40px] lg:text-[100px] font-playfair leading-none font-bold text-center flex-1 cursor-pointer"
           >
             Front-End 🧠 CheatSheet
           </div>
@@ -134,10 +148,18 @@ export default function App() {
                     <button
                       onClick={() => {
                         navigate("/users");
+                      }}
+                      className="block px-4 py-2 text-left w-full hover:bg-gray-700 transition-colors"
+                    >
+                      Користувачі
+                    </button>
+                     <button
+                      onClick={() => {
+                        navigate("/chats");
                     }}
                       className="block px-4 py-2 text-left w-full hover:bg-gray-700 transition-colors"
                     >
-                       Користувачі
+                       Мої Чати
                     </button>
                     <button
                       onClick={() =>
@@ -242,7 +264,6 @@ export default function App() {
 
               {currentUser ? (
                 <>
-                
                   <button
                     onClick={() => {
                       navigate(`/profile/${currentUser.uid}`);
@@ -259,6 +280,24 @@ export default function App() {
                     )}
                     <span>{userName}</span>
                   </button>
+                   <button
+                      onClick={() => {
+                        navigate("/users");
+                         setIsMobileMenuOpen(false);
+                    }}
+                      className="block w-full text-left px-4 py-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+                    >
+                       Користувачі
+                    </button>
+                     <button
+                      onClick={() => {
+                        navigate("/chats");
+                         setIsMobileMenuOpen(false);
+                    }}
+                      className="block w-full text-left px-4 py-3 rounded-lg text-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+                    >
+                       Мої Чати
+                    </button>
                   <button
                     onClick={() => {
                       signOut(auth).then(() => {
@@ -315,6 +354,7 @@ export default function App() {
       >
         ⥣
       </button>
+      <NotificationHandler />
     </div>
   );
 }
